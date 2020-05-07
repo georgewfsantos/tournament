@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
+import PlayerController from './app/controllers/PlayerController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => {
-  return res.json({ message: 'Server is runing on port 3333' });
-});
+routes.post('/players', PlayerController.store);
 
 export default routes;
