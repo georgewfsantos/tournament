@@ -3,6 +3,12 @@ import * as Yup from 'yup';
 import Player from '../models/Player';
 
 class PlayerController {
+  async index(req, res){
+    const players = await Player.findAll();
+
+    return res.json(players);
+  }
+
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
