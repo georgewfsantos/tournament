@@ -9,6 +9,14 @@ class PlayerController {
     return res.json(players);
   }
 
+  async show(req, res){
+    const{id} = req.params;
+
+    const player = await Player.findByPk(id);
+
+    return res.json(player);
+  }
+
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
