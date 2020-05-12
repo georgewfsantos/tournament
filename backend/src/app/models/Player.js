@@ -5,10 +5,12 @@ class Player extends Model {
     super.init(
       {
         name: Sequelize.STRING,
-        category: Sequelize.NUMBER,
+        category: Sequelize.INTEGER,
+        message: Sequelize.TEXT,
       },
       {
         sequelize,
+        paranoid: true,
       }
     );
     return this;
