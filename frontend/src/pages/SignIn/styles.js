@@ -24,7 +24,6 @@ export const Content = styled.div`
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
-    color: #566468;
   }
 
   .title strong {
@@ -45,6 +44,7 @@ export const Content = styled.div`
       padding: 0 15px;
       color: #000;
       margin: 0 0 10px;
+      color: #566468;
       &::placeholder {
         color: #fff;
       }
