@@ -39,7 +39,7 @@ export function setToken({ payload }) {
 }
 
 export function signOut() {
-  history.push('/home');
+  history.push('/');
 }
 
 export default all([

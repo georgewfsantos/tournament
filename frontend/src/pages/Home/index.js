@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import Header from '~/components/Header';
 
 import { Container } from './styles';
 
 export default function Home() {
   return (
-    <Container>
-      <h1>Home</h1>
-      <Link to="/">Sou admin</Link>
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <h1>Home</h1>
+      </Container>
+    </>
   );
 }

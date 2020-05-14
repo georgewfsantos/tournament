@@ -14,7 +14,6 @@ export const Content = styled.div`
   background: #fff;
   width: 100%;
   max-width: 360px;
-  height: 448px;
   text-align: center;
   padding: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -33,7 +32,7 @@ export const Content = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 18px;
     padding: 25px;
     input {
       background: rgba(131, 193, 128, 0.6);
@@ -55,6 +54,23 @@ export const Content = styled.div`
       margin: 0 0 10px;
       font-weight: bold;
     }
+
+    textarea {
+      width: 100%;
+      height: 127px;
+      border-radius: 4px;
+      border: solid 1px #dddddd;
+      color: #566468;
+      font-size: 14px;
+      padding: 10px;
+      resize: none;
+      margin-bottom: 10px;
+      &::placeholder {
+        color: #fff;
+      }
+
+      background: rgba(131, 193, 128, 0.6);
+    }
     button {
       margin: 5px 0 0;
       height: 44px;
@@ -69,15 +85,16 @@ export const Content = styled.div`
         background: ${lighten(0.08, '#6e706c')};
       }
     }
-  }
 
-  a {
-    color: #83c180;
-    font-size: 18px;
-    font-weight: bold;
+    a {
+      color: #83c180;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
 
-    &:hover {
-      color: ${lighten(0.08, '#83c180')};
+      &:hover {
+        color: ${lighten(0.08, '#83c180')};
+      }
     }
   }
 `;

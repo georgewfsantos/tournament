@@ -5,13 +5,14 @@ import Route from './Route';
 import SignIn from '~/pages/SignIn';
 import Dashboard from '~/pages/Dashboard';
 import Home from '~/pages/Home';
+import Subscriptions from '~/pages/Subscriptions';
 
 export default function AllRoutes() {
   return (
     <Switch>
-      <Route path="/" exact component={SignIn} />
-
-      <Route path="/home" component={Home} />
+      <Route path="/" exact component={Home} />
+      <Route path="/login" component={SignIn} />
+      <Route path="/subscriptions" component={Subscriptions} />
       <Route path="/dashboard" isPrivate component={Dashboard} />
     </Switch>
   );
