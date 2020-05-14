@@ -21,7 +21,15 @@ export const Content = styled.div`
   border-radius: 4px;
   img {
     margin-top: 25px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
   }
+
+  .title strong {
+    color: #566468;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -49,7 +57,7 @@ export const Content = styled.div`
     button {
       margin: 5px 0 0;
       height: 44px;
-      background: #6e706c;
+      background: #566468;
       color: #fff;
       font-weight: bold;
       font-size: 16px;

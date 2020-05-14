@@ -1,19 +1,19 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
-import Header from '~/components/Header';
+import AdminHeader from '~/components/AdminHeader';
 
 import { Wrapper } from './styles';
 
-export default function DefaultLayout({ children }) {
+export default function AdminLayout({ children }) {
   return (
     <Wrapper>
-      <Header />
+      <AdminHeader />
       {children}
     </Wrapper>
   );
 }
 
-DefaultLayout.propTypes = {
+AdminLayout.propTypes = {
   children: Proptypes.element.isRequired,
 };

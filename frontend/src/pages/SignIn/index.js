@@ -5,6 +5,10 @@ import * as Yup from 'yup';
 
 import { signInRequest } from '~/store/modules/auth/actions';
 
+import logo from '~/assets/racket.svg';
+
+import { Wrapper, Content } from './styles';
+
 const schema = Yup.object().shape({
   email: Yup.string()
     .email('Insira um email válido')
@@ -13,6 +17,7 @@ const schema = Yup.object().shape({
 });
 
 export default function Login() {
+  const title = 'Torneio Ranking Rio Verde -Go';
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.auth.loading);
 
@@ -21,15 +26,19 @@ export default function Login() {
   }
 
   return (
-    <>
-      {/* <img src={logo} alt="" /> */}
+    <Wrapper>
+      <Content>
+        <img src={logo} alt="Tennis Racket with ball" />
+        <div className="title">
+          <strong>{title.toUpperCase()}</strong>
+        </div>
+        <Form schema={schema} onSubmit={handleSubmit}>
+          <Input name="email" type="email" placeholder="Seu email" />
+          <Input name="password" type="password" placeholder="Sua senha" />
 
-      <Form schema={schema} onSubmit={handleSubmit}>
-        <Input name="email" type="email" placeholder="Seu email" />
-        <Input name="password" type="password" placeholder="Sua senha" />
-
-        <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
-      </Form>
-    </>
+          <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
+        </Form>
+      </Content>
+    </Wrapper>
   );
 }
