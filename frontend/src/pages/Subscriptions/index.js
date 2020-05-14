@@ -33,7 +33,11 @@ export default function Subscriptions() {
           </div>
           <Form schema={schema} onSubmit={handleSubmit}>
             <Input name="name" placeholder="Seu nome completo" />
-            <Input name="category" type="number" placeholder="Classe" />
+            <Input
+              name="category"
+              type="number"
+              placeholder="Classe (1, 2, 4 ...)"
+            />
             <Input
               name="message"
               multiline
