@@ -7,6 +7,7 @@ import Dashboard from '~/pages/Dashboard';
 import Home from '~/pages/Home';
 import Subscriptions from '~/pages/Subscriptions';
 import Brackets from '~/pages/Brackets';
+import BracketItem from '~/pages/Brackets/components/BracketItem';
 
 export default function AllRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AllRoutes() {
       <Route path="/subscriptions" component={Subscriptions} />
       <Route path="/dashboard" isPrivate component={Dashboard} />
       <Route path="/brackets" component={Brackets} />
+      <Route path="/bracketItem" component={BracketItem} />
     </Switch>
   );
 }
