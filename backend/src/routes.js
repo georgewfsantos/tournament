@@ -11,6 +11,8 @@ const routes = new Router();
 routes.post('/players', PlayerController.store);
 routes.post('/sessions', SessionController.store);
 
+routes.get('/categories', CategoryController.index);
+
 routes.use(authMiddleware);
 
 routes.get('/players', PlayerController.index);
