@@ -9,7 +9,9 @@ export default function Home() {
     <>
       <Header />
       <Container>
-        <h1>Home</h1>
+        <section>
+          <div className="title">Hello</div>
+        </section>
       </Container>
     </>
   );

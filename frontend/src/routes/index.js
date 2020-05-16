@@ -6,6 +6,7 @@ import SignIn from '~/pages/SignIn';
 import Dashboard from '~/pages/Dashboard';
 import Home from '~/pages/Home';
 import Subscriptions from '~/pages/Subscriptions';
+import Brackets from '~/pages/Brackets';
 
 export default function AllRoutes() {
   return (
@@ -14,6 +15,7 @@ export default function AllRoutes() {
       <Route path="/login" component={SignIn} />
       <Route path="/subscriptions" component={Subscriptions} />
       <Route path="/dashboard" isPrivate component={Dashboard} />
+      <Route path="/brackets" component={Brackets} />
     </Switch>
   );
 }
