@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 
 import Player from '../models/Player';
+import Category from '../models/Category';
 
 class PlayerController {
   async index(req, res) {
@@ -11,8 +12,25 @@ class PlayerController {
           where: {
             category: categoryNumber,
           },
+          attributes: ['id', 'name', 'message'],
+          include: [
+            {
+              model: Category,
+              as: 'category',
+              attributes: ['id', 'name'],
+            },
+          ],
         })
-      : await Player.findAll();
+      : await Player.findAll({
+          attributes: ['id', 'name', 'message'],
+          include: [
+            {
+              model: Category,
+              as: 'category',
+              attributes: ['id', 'name'],
+            },
+          ],
+        });
 
     return res.json(players);
   }
@@ -32,7 +50,7 @@ class PlayerController {
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
-      category: Yup.number().required(),
+      category_id: Yup.number().required(),
       message: Yup.string(),
     });
 
@@ -42,12 +60,12 @@ class PlayerController {
         .json({ error: 'Validation failed. Check the information provided' });
     }
 
-    const { name, category, message } = req.body;
+    const { name, category_id, message } = req.body;
 
     try {
       const player = await Player.create({
         name,
-        category,
+        category_id,
         message,
       });
       return res.json(player);
