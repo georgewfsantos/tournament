@@ -17,7 +17,7 @@ export default function AllRoutes() {
       <Route path="/subscriptions" component={Subscriptions} />
       <Route path="/dashboard" isPrivate component={Dashboard} />
       <Route path="/brackets" component={Brackets} />
-      <Route path="/bracketItem" component={BracketItem} />
+      <Route path="/bracketItem/:categoryId" component={BracketItem} />
     </Switch>
   );
 }

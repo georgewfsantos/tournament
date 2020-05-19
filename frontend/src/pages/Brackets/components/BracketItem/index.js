@@ -1,10 +1,15 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+
+import Header from '~/components/Header';
 
 import './styles.css';
 
 export default function BracketItem() {
+  const { categoryId } = useParams();
   return (
     <>
+      <Header />
       <section id="bracket">
         <div className="container">
           <div className="split split-one">

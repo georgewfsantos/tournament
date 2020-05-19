@@ -5,6 +5,7 @@ import api from '~/services/api';
 import { Container } from './styles';
 
 import Header from '~/components/Header';
+import BracketButton from '~/pages/Brackets/components/BracketButton';
 
 function Brackets() {
   const [categories, setCategories] = useState([]);
@@ -24,9 +25,7 @@ function Brackets() {
         <h1>Chaves</h1>
         <div className="option-container">
           {categories.map((category) => (
-            <div className="title">
-              <button type="button">{category.name}</button>
-            </div>
+            <BracketButton key={category.id} category={category} />
           ))}
         </div>
       </Container>
