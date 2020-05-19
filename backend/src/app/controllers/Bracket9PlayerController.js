@@ -1,8 +1,8 @@
 import * as Yup from 'yup';
 
-import Bracket1player from '../models/Bracket1player';
+import Bracket9player from '../models/Bracket9player';
 
-class Bracket1PlayerController {
+class Bracket9PlayerController {
   async store(req, res) {
     const schema = Yup.object().shape({
       player_1_id: Yup.number(),
@@ -46,7 +46,7 @@ class Bracket1PlayerController {
     }
 
     try {
-      const bracket_1 = await Bracket1player.create({
+      const bracket_1 = await Bracket9player.create({
         ...req.body,
       });
       return res.json(bracket_1);
@@ -56,4 +56,4 @@ class Bracket1PlayerController {
   }
 }
 
-export default new Bracket1PlayerController();
+export default new Bracket9PlayerController();
