@@ -7,6 +7,7 @@ import './styles.css';
 
 export default function BracketItem() {
   const { categoryId } = useParams();
+  console.tron(categoryId);
   return (
     <>
       <Header />
