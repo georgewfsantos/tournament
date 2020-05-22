@@ -13,6 +13,7 @@ export default function Home() {
           <div className="title">Hello</div>
         </section>
       </Container>
+      <section />
     </>
   );
 }
