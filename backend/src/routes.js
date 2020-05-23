@@ -21,6 +21,22 @@ import Bracket12PlayerController from './app/controllers/Bracket12PlayerControll
 const routes = new Router();
 
 routes.post('/players', PlayerController.store);
+
+routes.get('/categories', CategoryController.index);
+
+routes.get('/bracket1', Bracket1PlayerController.index);
+/* routes.get('/bracket2', Bracket2PlayerController.index);
+routes.get('/bracket3', Bracket3PlayerController.index);
+routes.get('/bracket4', Bracket4PlayerController.index);
+routes.get('/bracket5', Bracket5PlayerController.index);
+routes.get('/bracket6', Bracket6PlayerController.index);
+routes.get('/bracket7', Bracket7PlayerController.index);
+routes.get('/bracket8', Bracket8PlayerController.index);
+routes.get('/bracket9', Bracket9PlayerController.index);
+routes.get('/bracket10', Bracket10PlayerController.index);
+routes.get('/bracket11', Bracket11PlayerController.index);
+routes.get('/bracket12', Bracket12PlayerController.index); */
+
 routes.post('/sessions', SessionController.store);
 
 routes.get('/categories', CategoryController.index);

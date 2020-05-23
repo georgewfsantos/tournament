@@ -3,6 +3,12 @@ import * as Yup from 'yup';
 import Bracket1player from '../models/Bracket1player';
 
 class Bracket1PlayerController {
+  async index(req, res) {
+    const players = await Bracket1player.findAll({});
+
+    return res.json(players);
+  }
+
   async store(req, res) {
     const schema = Yup.object().shape({
       player_1_id: Yup.number(),
