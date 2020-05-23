@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Header from '~/components/Header';
 
 import './styles.css';
+import api from '~/services/api';
 
 export default function BracketItem() {
   const { categoryId } = useParams();
-  console.tron(categoryId);
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    async function loadPlayers() {
+      const response = await api.get(`/bracket${categoryId}`);
+
+      setPlayers(response.data);
+    }
+    loadPlayers();
+  }, [categoryId]);
+
   return (
     <>
       <Header />
