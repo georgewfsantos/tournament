@@ -10,7 +10,7 @@ export default function BracketButton({ category }) {
       <div className="title">
         <button
           type="button"
-          onClick={() => history.push(`BracketItem/${category.id}`)}
+          onClick={() => history.push(`/bracketItem/${category.id}`)}
         >
           {category.name}
         </button>
