@@ -7,7 +7,7 @@ import Dashboard from '~/pages/Dashboard';
 import Home from '~/pages/Home';
 import Subscriptions from '~/pages/Subscriptions';
 import Brackets from '~/pages/Brackets';
-import BracketItem from '~/pages/Brackets/components/BracketItem';
+import BracketItem from '~/pages/Brackets/BracketItem';
 
 export default function AllRoutes() {
   return (
