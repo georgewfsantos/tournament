@@ -14,7 +14,8 @@ export default function BracketItem() {
     async function loadPlayers() {
       const response = await api.get(`/bracket${categoryId}`);
 
-      setPlayers(response.data);
+      setPlayers(response.data[0]);
+      console.log(response.data[0]);
     }
     loadPlayers();
   }, [categoryId]);
@@ -32,7 +33,8 @@ export default function BracketItem() {
               </div>
               <ul className="matchup">
                 <li className="team team-top">
-                  Player<span className="score">76</span>
+                  {players.player_1_id}
+                  <span className="score">76</span>
                 </li>
                 <li className="team team-bottom">
                   Player<span className="score">82</span>
