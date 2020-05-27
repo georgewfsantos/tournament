@@ -16,6 +16,8 @@ export default function BracketItem() {
 
       setPlayers(response.data[0]);
       console.log(response.data[0]);
+
+      // refactor how the brackets are created in the api
     }
     loadPlayers();
   }, [categoryId]);
