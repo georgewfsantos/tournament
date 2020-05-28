@@ -34,7 +34,7 @@ class Bracket1player extends Model {
     });
     this.belongsTo(models.Player, {
       foreignKey: 'player_6_id',
-      as: 'player',
+      as: 'player_6',
     });
     this.belongsTo(models.Player, {
       foreignKey: 'player_7_id',
