@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 import history from '~/services/history';
 
-export default function BracketButton({ category }) {
+export default function AdminBracketButton({ category }) {
   return (
     <Container>
       <div className="title">
         <button
           type="button"
-          onClick={() => history.push(`/brackets/bracketItem/${category.id}`)}
+          onClick={() =>
+            history.push(`/dashboard/adminBracketItem/${category.id}`)
+          }
         >
           {category.name}
         </button>
@@ -19,7 +21,7 @@ export default function BracketButton({ category }) {
   );
 }
 
-BracketButton.propTypes = {
+AdminBracketButton.propTypes = {
   category: PropTypes.shape({
     name: PropTypes.string,
     id: PropTypes.number,
