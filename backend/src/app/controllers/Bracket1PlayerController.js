@@ -60,6 +60,12 @@ class Bracket1PlayerController {
       return res.status(400).json({ error: `${err}` });
     }
   }
+
+  async update(req, res) {
+    const bracket_1 = await Bracket1player.update(req.body);
+
+    return res.json(bracket_1);
+  }
 }
 
 export default new Bracket1PlayerController();
