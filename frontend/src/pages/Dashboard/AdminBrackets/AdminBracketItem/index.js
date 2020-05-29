@@ -37,8 +37,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_1"
+                    id="player_1"
                     maxLength="18"
                   />
                   <span className="score">76</span>
@@ -46,8 +46,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_2"
+                    id="player_2"
                     maxLength="18"
                   />
                   <span className="score">82</span>
@@ -57,8 +57,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_3"
+                    id="player_3"
                     maxLength="18"
                   />
                   <span className="score">64</span>
@@ -66,8 +66,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_4"
+                    id="player_4"
                     maxLength="18"
                   />
                   <span className="score">56</span>
@@ -77,8 +77,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_5"
+                    id="player_5"
                     maxLength="18"
                   />
                   <span className="score">68</span>
@@ -86,8 +86,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_6"
+                    id="player_6"
                     maxLength="18"
                   />
                   <span className="score">54</span>
@@ -97,8 +97,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_7"
+                    id="player_7"
                     maxLength="18"
                   />
                   <span className="score">74</span>
@@ -106,8 +106,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_8"
+                    id="player_8"
                     maxLength="18"
                   />
                   <span className="score">92</span>
@@ -117,8 +117,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_9"
+                    id="player_9"
                     maxLength="18"
                   />
                   <span className="score">78</span>
@@ -126,8 +126,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_10"
+                    id="player_10"
                     maxLength="18"
                   />
                   <span className="score">80</span>
@@ -137,8 +137,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_11"
+                    id="player_11"
                     maxLength="18"
                   />
                   <span className="score">64</span>
@@ -146,8 +146,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_12"
+                    id="player_12"
                     maxLength="18"
                   />
                   <span className="score">63</span>
@@ -157,8 +157,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_13"
+                    id="player_13"
                     maxLength="18"
                   />
                   <span className="score">70</span>
@@ -166,8 +166,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_14"
+                    id="player_14"
                     maxLength="18"
                   />
                   <span className="score">59</span>
@@ -177,8 +177,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_15"
+                    id="player_15"
                     maxLength="18"
                   />
                   <span className="score">64</span>
@@ -187,8 +187,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_16"
+                    id="player_16"
                     maxLength="18"
                   />
                   <span className="score">68</span>
@@ -556,8 +556,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_17"
+                    id="player_17"
                     maxLength="18"
                   />
                   <span className="score">62</span>
@@ -565,8 +565,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_18"
+                    id="player_18"
                     maxLength="18"
                   />
                   <span className="score">54</span>
@@ -576,8 +576,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_19"
+                    id="player_19"
                     maxLength="18"
                   />
                   <span className="score">68</span>
@@ -585,8 +585,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_20"
+                    id="player_20"
                     maxLength="18"
                   />
                   <span className="score">66</span>
@@ -596,8 +596,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_21"
+                    id="player_21"
                     maxLength="18"
                   />
                   <span className="score">64</span>
@@ -605,8 +605,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_22"
+                    id="player_22"
                     maxLength="18"
                   />
                   <span className="score">56</span>
@@ -616,8 +616,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_23"
+                    id="player_23"
                     maxLength="18"
                   />
                   <span className="score">36</span>
@@ -625,8 +625,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_24"
+                    id="player_24"
                     maxLength="18"
                   />
                   <span className="score">40</span>
@@ -636,8 +636,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_25"
+                    id="player_25"
                     maxLength="18"
                   />
                   <span className="score">38</span>
@@ -645,8 +645,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_26"
+                    id="player_26"
                     maxLength="18"
                   />
                   <span className="score">44</span>
@@ -656,8 +656,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_27"
+                    id="player_27"
                     maxLength="18"
                   />
                   <span className="score">52</span>
@@ -665,8 +665,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_28"
+                    id="player_28"
                     maxLength="18"
                   />
                   <span className="score">80</span>
@@ -676,8 +676,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_29"
+                    id="player_29"
                     maxLength="18"
                   />
                   <span className="score">58</span>
@@ -685,8 +685,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_30"
+                    id="player_30"
                     maxLength="18"
                   />
                   <span className="score">59</span>
@@ -696,8 +696,8 @@ export default function AdminBracketItem() {
                 <li className="team team-top">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_31"
+                    id="player_31"
                     maxLength="18"
                   />
                   <span className="score">74</span>
@@ -705,8 +705,8 @@ export default function AdminBracketItem() {
                 <li className="team team-bottom">
                   <input
                     type="text"
-                    name="player_"
-                    id="player_"
+                    name="player_32"
+                    id="player_32"
                     maxLength="18"
                   />
                   <span className="score">111</span>
