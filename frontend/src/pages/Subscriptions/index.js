@@ -1,56 +1,54 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Form, Input } from '@rocketseat/unform';
+import React, { useRef, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+import { Form } from '@unform/web';
 import * as Yup from 'yup';
 
-import Header from '~/components/Header';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
-import logo from '~/assets/racket.svg';
+import logo from '../../assets/racket.svg';
 
-import { Wrapper, Content } from './styles';
+import { Container, Content, AnimationContainer, Background } from './styles';
 
-const schema = Yup.object().shape({
-  email: Yup.string()
-    .email('Insira um email válido')
-    .required('O email é obrigatório'),
-  password: Yup.string().required('A senha é obrigatória'),
-});
+function SignIn() {
+  const formRef = useRef(null);
 
-export default function Subscriptions() {
-  const title = 'Torneio Ranking Rio Verde -Go';
-  const loading = useSelector((state) => state.auth.loading);
+  const handleSubmit = useCallback(async (data) => {
+    try {
+      // formRef.current?.setErrors({});
+      const schema = Yup.object().shape({
+        email: Yup.string()
+          .required('Email obrigatório')
+          .email('Digite um email válido'),
+        password: Yup.string().required('Senha obrigatória'),
+      });
 
-  function handleSubmit() {}
+      await schema.validate(data, {
+        abortEarly: false,
+      });
 
-  return (
-    <>
-      <Header />
-      <Wrapper>
-        <Content>
-          <img src={logo} alt="Tennis Racket with ball" />
-          <div className="title">
-            <strong>{title.toUpperCase()}</strong>
-          </div>
-          <Form schema={schema} onSubmit={handleSubmit}>
-            <Input name="name" placeholder="Seu nome completo" />
-            <Input
-              name="category"
-              type="number"
-              placeholder="Classe (1, 2, 4 ...)"
-            />
-            <Input
-              name="message"
-              multiline
-              numberOfLines={50}
-              placeholder="Digite sua mensagem (opcional)"
-            />
+      /* await signIn({
+          email: data.email,
+          password: data.password,
+        }); */
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        // const errors = getValidationErrors(err);
+        // formRef.current?.setErrors(errors);
+        // return
+      }
 
-            <button type="submit">
-              {loading ? 'Carregando...' : 'Enviar'}
-            </button>
-          </Form>
-        </Content>
-      </Wrapper>
-    </>
-  );
+      /* addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description:
+            'Ocorreu um erro e não foi possível realizar o login. Verique os dados',
+        }); */
+    }
+  }, []);
+
+  return <h1>Subscriptions</h1>;
 }
+
+export default SignIn;

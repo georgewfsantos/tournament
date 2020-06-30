@@ -1,51 +1,29 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
-import { signInRequest } from '~/store/modules/auth/actions';
+import { signInRequest } from '../../store/modules/auth/actions';
 
-import Header from '~/components/Header';
-import logo from '~/assets/racket.svg';
+import { Container, Content } from './styles';
 
-import { Wrapper, Content } from './styles';
+import logo from '../../assets/racket.svg';
 
 const schema = Yup.object().shape({
   email: Yup.string()
-    .email('Insira um email válido')
-    .required('O email é obrigatório'),
-  password: Yup.string().required('A senha é obrigatória'),
+    .email('Invalid format. Insert a valid email')
+    .required('You must insert an email adress'),
+  password: Yup.string().required('You must insert your password'),
 });
 
-export default function Login() {
-  const title = 'Torneio Ranking Rio Verde -Go';
-  const dispatch = useDispatch();
-  const loading = useSelector((state) => state.auth.loading);
+export default function SignIn() {
+  /* const dispatch = useDispatch();
+  const loading = useSelector((state) => state.auth.loading); */
 
-  function handleSubmit({ email, password }) {
+  /* function handleSubmit({ email, password }) {
     dispatch(signInRequest(email, password));
-  }
+  } */
 
-  return (
-    <>
-      <Header />
-      <Wrapper>
-        <Content>
-          <img src={logo} alt="Tennis Racket with ball" />
-
-          <div className="title">
-            <strong>{title.toUpperCase()}</strong>
-          </div>
-          <Form schema={schema} onSubmit={handleSubmit}>
-            <Input name="email" type="email" placeholder="Seu email" />
-            <Input name="password" type="password" placeholder="Sua senha" />
-
-            <button type="submit">
-              {loading ? 'Carregando...' : 'Acessar'}
-            </button>
-          </Form>
-        </Content>
-      </Wrapper>
-    </>
-  );
+  return <h1>SignIn</h1>;
 }
