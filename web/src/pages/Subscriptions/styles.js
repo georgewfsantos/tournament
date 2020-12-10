@@ -54,11 +54,11 @@ export const Content = styled.div`
     button {
       width: 100%;
       height: 56px;
-      background: #f46960f2;
+      background: #32067c;
       border: 0;
       border-radius: 10px;
       padding: 16px;
-      color: #312e38;
+      color: #fff;
       font-weight: bold;
       margin-top: 16px;
     }
