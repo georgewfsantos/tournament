@@ -45,8 +45,10 @@ export const Container = styled.div`
     background: transparent;
     border: 0;
     color: #f4ede8;
+
     &::placeholder {
       color: #666360;
+      margin-left: 50px;
     }
   }
 
