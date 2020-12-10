@@ -11,6 +11,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+
+      email: {
+        type: Sequelize.STRING,
+      },
+
       category_id: {
         type: Sequelize.INTEGER,
         references: { model: 'categories', key: 'id' },
@@ -18,9 +23,20 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: false,
       },
-      message: {
+
+      phone_number: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+
+      guests: {
+        type: Sequelize.STRING,
+      },
+
+      restrictions: {
         type: Sequelize.TEXT,
       },
+
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

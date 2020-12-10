@@ -5,7 +5,11 @@ class Player extends Model {
     super.init(
       {
         name: Sequelize.STRING,
-        message: Sequelize.TEXT,
+        email: Sequelize.STRING,
+        category_id: Sequelize.INTEGER,
+        phone_number: Sequelize.STRING,
+        guests: Sequelize.STRING,
+        restrictions: Sequelize.TEXT,
       },
       {
         sequelize,
