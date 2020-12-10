@@ -17,7 +17,7 @@ export default function Subscriptions() {
           <input name="category_id" placeholder="Classe" />
           <input name="phone_number" placeholder="Telefone" />
           <input name="guests" placeholder="Acompanhantes(se houver)" />
-          <input name="restrictions" placeholder="Mensagem" />
+          <textarea name="restrictions" placeholder="Mensagem" />
 
           <button type="submit">Enviar</button>
         </form>

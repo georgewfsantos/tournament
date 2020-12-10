@@ -33,16 +33,28 @@ export const Content = styled.div`
       border-radius: 10px;
       padding: 16px;
       width: 100%;
+      opacity: 0.6;
 
       & + input {
         margin-top: 8px;
       }
     }
 
+    textarea {
+      background: #232129;
+      border: 2px solid #232129;
+      border-radius: 10px;
+      padding: 16px;
+      width: 100%;
+      opacity: 0.6;
+      margin-top: 8px;
+      height: 180px;
+    }
+
     button {
       width: 100%;
       height: 56px;
-      background: #ff9000;
+      background: #f46960f2;
       border: 0;
       border-radius: 10px;
       padding: 16px;
