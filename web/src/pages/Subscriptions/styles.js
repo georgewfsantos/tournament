@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: center;
-  background-color: paleturquoise;
+  background-color: #afeeee;
 `;
 
 export const Content = styled.div`
@@ -34,6 +34,7 @@ export const Content = styled.div`
       padding: 16px;
       width: 100%;
       opacity: 0.6;
+      color: #fff;
 
       & + input {
         margin-top: 8px;
@@ -49,6 +50,7 @@ export const Content = styled.div`
       opacity: 0.6;
       margin-top: 8px;
       height: 180px;
+      color: #fff;
     }
 
     button {
@@ -59,7 +61,6 @@ export const Content = styled.div`
       border-radius: 10px;
       padding: 16px;
       color: #fff;
-      font-weight: bold;
       margin-top: 16px;
     }
   }

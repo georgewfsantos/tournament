@@ -19,7 +19,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
   body, input , button, textarea {
-    font: 14px 'Roboto', sans-serif;
+    font: 16px 'Roboto Slab', sans-serif;
   }
   a {
     text-decoration: none;
@@ -29,11 +29,11 @@ export default createGlobalStyle`
   }
   button {
     cursor: pointer;
+    font-weight: 500;
   }
-  div.Toastify__toast.Toastify__toast--error{
-    background : #ee4d64;
+
+  h1, h2 , h3, h4, h5, h6, strong {
+    font-weight: 500;
   }
-  div.Toastify__toast.Toastify__toast--success{
-    background : #c2c5cc;
-  }
+  
 `;

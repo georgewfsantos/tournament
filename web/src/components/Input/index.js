@@ -34,6 +34,7 @@ function Input({ name, icon: Icon, ...rest }) {
     <Container isFocused={isFocused} errorOutline={!!error} hasValue={hasValue}>
       {Icon && <Icon size={20} />}
       <input
+        name={name}
         defaultValue={defaultValue}
         {...rest}
         ref={inputRef}
