@@ -35,6 +35,7 @@ export const Content = styled.div`
       width: 100%;
       opacity: 0.6;
       color: #fff;
+      height: 50px;
 
       & + input {
         margin-top: 8px;

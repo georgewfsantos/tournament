@@ -7,11 +7,7 @@ import Toast from './Toast';
 
 import { Container } from './styles';
 
-interface ToastProps {
-  messages: ToastMessage[];
-}
-
-const ToastContainer: React.FC<ToastProps> = ({ messages }) => {
+const ToastContainer = ({ messages }) => {
   const messagesWithTransitions = useTransition(
     messages,
     (message) => message.id,
