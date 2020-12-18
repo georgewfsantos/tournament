@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   FiUser,
   FiPhone,
@@ -7,24 +7,33 @@ import {
   FiEdit,
   FiMail,
 } from 'react-icons/fi';
-
+import { Form } from '@unform/web';
 import { Container, Content } from './styles';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 const SignIn: React.FC = () => {
+  const handleSubmit = useCallback((data: object): void => {
+    console.log(data);
+  }, []);
+
   return (
     <Container>
       <Content>
         <img src="" alt="Tennis Tournament" />
 
-        <form>
+        <Form onSubmit={handleSubmit} initialData={{ name: 'Diego' }}>
           <h1>Faça sua inscrição</h1>
 
           <Input name="name" icon={FiUser} placeholder="Nome Completo" />
           <Input name="email" icon={FiMail} placeholder="E-mail" />
-          <Input name="category_id" icon={FiList} placeholder="Classe" />
+          <Input
+            type="number"
+            name="category_id"
+            icon={FiList}
+            placeholder="Classe"
+          />
           <Input name="phone_number" icon={FiPhone} placeholder="Telefone" />
           <Input
             name="guests"
@@ -33,8 +42,8 @@ const SignIn: React.FC = () => {
           />
           <Input name="restrictions" icon={FiEdit} placeholder="Mensagem" />
 
-          <Button type="button">Entrar</Button>
-        </form>
+          <Button type="submit">Entrar</Button>
+        </Form>
       </Content>
     </Container>
   );
