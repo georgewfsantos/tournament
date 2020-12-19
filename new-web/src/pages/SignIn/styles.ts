@@ -18,6 +18,7 @@ export const Content = styled.div`
   max-width: 700px;
 
   form {
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
