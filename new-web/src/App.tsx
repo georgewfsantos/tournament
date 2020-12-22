@@ -3,12 +3,17 @@ import React from 'react';
 import SignIn from './pages/SignIn';
 import AdminSignIn from './pages/AdminSignIn';
 import Subscriptions from './pages/Subscriptions';
+
 import GlobalStyle from './styles/global';
+
+import { AuthProvider } from './context/AuthContext';
 
 const App: React.FC = () => {
   return (
     <>
-      <Subscriptions />
+      <AuthProvider>
+        <SignIn />
+      </AuthProvider>
       <GlobalStyle />
     </>
   );
