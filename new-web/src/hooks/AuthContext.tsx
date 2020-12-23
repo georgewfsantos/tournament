@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useState } from 'react';
+import React, { createContext, useCallback, useState, useContext } from 'react';
 import api from '../services/api';
 
 interface UserAuthData {
@@ -14,13 +14,12 @@ interface SignInCredentials {
 interface AuthContextData {
   user: object;
   signIn(credentials: SignInCredentials): Promise<void>;
+  signOut(): void;
 }
 
-export const AuthContext = createContext<AuthContextData>(
-  {} as AuthContextData,
-);
+const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-export const AuthProvider: React.FC = ({ children }) => {
+const AuthProvider: React.FC = ({ children }) => {
   const [userData, setUserData] = useState<UserAuthData>(() => {
     const token = localStorage.getItem('@tournamet:token');
     const user = localStorage.getItem('@tournamet:user');
@@ -45,9 +44,29 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     setUserData({ token, user });
   }, []);
+
+  const signOut = useCallback(() => {
+    localStorage.removeItem('@tournamet:token');
+    localStorage.removeItem('@tournamet:user');
+
+    setUserData({} as UserAuthData);
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ user: userData.user, signIn }}>
+    <AuthContext.Provider value={{ user: userData.user, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
+const useAuth = (): AuthContextData => {
+  const context = useContext(AuthContext);
+
+  if (!context) {
+    throw new Error('Check if your app is wrapped in the AuthProvider');
+  }
+
+  return context;
+};
+
+export { AuthProvider, useAuth };
