@@ -29,7 +29,9 @@ const SignIn: React.FC = () => {
         formRef.current?.setErrors({});
 
         const schema = Yup.object().shape({
-          email: Yup.string().email('Digite um formato válido de e-mail'),
+          email: Yup.string()
+            .required('Email obrigatório')
+            .email('Digite um formato válido de e-mail'),
           password: Yup.string().required().max(10),
         });
 
@@ -42,8 +44,12 @@ const SignIn: React.FC = () => {
           password,
         });
       } catch (err) {
-        const errors = getValidationErrors(err);
-        formRef.current?.setErrors(errors);
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
+          formRef.current?.setErrors(errors);
+        }
+
+        // trigger toast
       }
     },
     [signIn],
