@@ -52,7 +52,7 @@ const SignIn: React.FC = () => {
         }
 
         addToast({
-          type: 'error',
+          type: 'info',
           title: 'Erro na Autenticação',
           description:
             'Não foi possível realizar o login. Verifique seus dados.',
