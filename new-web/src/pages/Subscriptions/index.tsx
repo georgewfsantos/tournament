@@ -16,34 +16,56 @@ import { Container, Content } from './styles';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import api from '../../services/api';
+import { useToast } from '../../hooks/toast';
 
 const Subscriptions: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const { addToast } = useToast();
 
-  const handleSubmit = useCallback(async (data: object) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: object) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        name: Yup.string().required('Nome é obrigatório'),
-        email: Yup.string().email('Digite um formato válido de e-mail'),
-        category_id: Yup.number()
-          .required()
-          .moreThan(0, 'Deve ser um número de 1 a 5')
-          .lessThan(6, 'Deve ser um número de 1 a 5'),
-        phone_number: Yup.string().required('Número de telefone é obrigatório'),
-        guests: Yup.string(),
-        restrictions: Yup.string(),
-      });
+        const schema = Yup.object().shape({
+          name: Yup.string().required('Nome é obrigatório'),
+          email: Yup.string().email('Digite um formato válido de e-mail'),
+          category_id: Yup.number()
+            .required()
+            .moreThan(0, 'Deve ser um número de 1 a 5')
+            .lessThan(6, 'Deve ser um número de 1 a 5'),
+          phone_number: Yup.string().required(
+            'Número de telefone é obrigatório',
+          ),
+          guests: Yup.string(),
+          restrictions: Yup.string(),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
-    } catch (err) {
-      const errors = getValidationErrors(err);
-      formRef.current?.setErrors(errors);
-    }
-  }, []);
+        await schema.validate(data, {
+          abortEarly: false,
+        });
+
+        await api.post('/route', data);
+
+        addToast({
+          type: 'success',
+          title: 'Inscrição realizada com sucesso',
+        });
+      } catch (err) {
+        const errors = getValidationErrors(err);
+        formRef.current?.setErrors(errors);
+
+        addToast({
+          type: 'error',
+          title: 'Erro na Inscrição',
+          description:
+            'Não foi possível concluir sua inscrição. Verifique seus dados.',
+        });
+      }
+    },
+    [addToast],
+  );
 
   return (
     <Container>
