@@ -17,7 +17,6 @@ const Brackets: React.FC = () => {
   useEffect(() => {
     async function loadCategories() {
       const response = await api.get('/categories');
-      console.log(categories);
 
       setCategories(response.data);
     }
