@@ -69,11 +69,7 @@ const SignIn: React.FC = () => {
       <Content>
         <img src={logo} alt="Tennis Tournament" />
 
-        <Form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          initialData={{ name: 'Diego' }}
-        >
+        <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Acessar como Admin</h1>
 
           <Input name="email" icon={FiMail} placeholder="E-mail" />

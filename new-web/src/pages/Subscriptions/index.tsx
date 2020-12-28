@@ -74,11 +74,7 @@ const Subscriptions: React.FC = () => {
       <Content>
         <img src={logo} alt="Tennis Tournament" />
 
-        <Form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          initialData={{ name: 'Diego' }}
-        >
+        <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Faça sua inscrição</h1>
 
           <Input name="name" icon={FiUser} placeholder="Nome Completo" />
@@ -87,8 +83,7 @@ const Subscriptions: React.FC = () => {
             type="number"
             name="category_id"
             icon={FiList}
-            placeholder="Classe"
-            defaultValue={0}
+            placeholder="Classe (1, 2, etc...)"
           />
           <Input name="phone_number" icon={FiPhone} placeholder="Telefone" />
           <Input
@@ -98,7 +93,7 @@ const Subscriptions: React.FC = () => {
           />
           <Input name="restrictions" icon={FiEdit} placeholder="Mensagem" />
 
-          <Button type="submit">Entrar</Button>
+          <Button type="submit">Enviar</Button>
         </Form>
       </Content>
     </Container>

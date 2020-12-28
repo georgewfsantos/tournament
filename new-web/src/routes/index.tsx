@@ -5,8 +5,10 @@ import Route from './Route';
 
 import SignIn from '../pages/SignIn';
 import Subscriptions from '../pages/Subscriptions';
+import Brackets from '../pages/Brackets';
 
 import Dashboard from '../pages/Dashboard';
+import BracketItem from '../pages/Brackets/BracketItem';
 
 const Routes: React.FC = () => {
   return (
@@ -15,6 +17,12 @@ const Routes: React.FC = () => {
       <Route path="/subscriptions" component={Subscriptions} />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
+      <Route path="/brackets" exact component={Brackets} isPrivate />
+      <Route
+        path="/brackets/bracketItem/:categoryId"
+        component={BracketItem}
+        isPrivate
+      />
     </Switch>
   );
 };
