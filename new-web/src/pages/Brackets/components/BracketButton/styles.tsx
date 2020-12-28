@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import tennisBg from '../../../../assets/tennis-ball.png';
+import tennisBg from '../../../../assets/tennis_ball_1.png';
 
 export const Container = styled.div`
   .title {
