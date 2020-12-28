@@ -14,6 +14,8 @@ import getValidationErrors from '../../utils/getValidationErrors';
 
 import { Container, Content } from './styles';
 
+import logo from '../../assets/racket.svg';
+
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import api from '../../services/api';
@@ -70,7 +72,7 @@ const Subscriptions: React.FC = () => {
   return (
     <Container>
       <Content>
-        <img src="" alt="Tennis Tournament" />
+        <img src={logo} alt="Tennis Tournament" />
 
         <Form
           ref={formRef}

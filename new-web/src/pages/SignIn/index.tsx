@@ -10,6 +10,8 @@ import { useToast } from '../../hooks/toast';
 
 import { Container, Content } from './styles';
 
+import logo from '../../assets/racket.svg';
+
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
@@ -65,7 +67,7 @@ const SignIn: React.FC = () => {
   return (
     <Container>
       <Content>
-        <img src="" alt="Tennis Tournament" />
+        <img src={logo} alt="Tennis Tournament" />
 
         <Form
           ref={formRef}

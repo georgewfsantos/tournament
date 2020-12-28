@@ -17,13 +17,17 @@ export const Content = styled.div`
   width: 100%;
   max-width: 700px;
 
+  img {
+    width: 60px;
+  }
+
   form {
     width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin: 80px 0;
+    margin: 30px 0;
     flex-direction: column;
 
     h1 {
