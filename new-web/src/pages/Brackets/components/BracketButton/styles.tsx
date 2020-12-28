@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import tennisBg from '../../../../assets/tennis-ball.png';
 
 export const Container = styled.div`
   .title {
     display: flex;
     width: 150px;
-    height: 100%;
+    height: 150px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: 4px;
+    background: url(${tennisBg}) no-repeat center;
+    border-radius: 50%;
     transition: all 0.2s ease-in-out;
 
     :hover {
