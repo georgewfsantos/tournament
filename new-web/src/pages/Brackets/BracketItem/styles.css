@@ -51,6 +51,8 @@ body {
   font-size: 12px;
   padding: 40px 0;
 }
+
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -192,6 +194,40 @@ body {
 .final {
   margin: 4.5em 0;
 }
+
+#winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.winner {
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  margin-bottom: 10px;
+
+  padding: 0 5px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+.winner input {
+  text-align: center;
+}
+
+#champion-text {
+  font-size: 13px;
+  color: #32067c;
+  text-transform: uppercase;
+  text-align: center;
+  height: 40px;
+  margin-bottom: -1rem;
+}
+
 
 @-webkit-keyframes pulse {
   0% {
