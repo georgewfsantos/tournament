@@ -7,12 +7,9 @@ import { Container } from './styles';
 
 const Dashboard: React.FC = () => {
   return (
-    <>
-      <Header />
-      <Container>
-        <Link to="/brackets">Brackets</Link>
-      </Container>
-    </>
+    <Container>
+      <Link to="/brackets">Brackets</Link>
+    </Container>
   );
 };
 
