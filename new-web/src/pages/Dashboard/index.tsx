@@ -7,7 +7,6 @@ const Dashboard: React.FC = () => {
   return (
     <Container>
       <Link to="/brackets">Brackets</Link>
-      <Link to="/brackets/bracketDisplay">Brackets Display</Link>
     </Container>
   );
 };
