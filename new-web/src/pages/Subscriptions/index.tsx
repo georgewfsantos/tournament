@@ -1,4 +1,5 @@
 import React, { useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import {
   FiUser,
@@ -11,6 +12,7 @@ import {
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import getValidationErrors from '../../utils/getValidationErrors';
+import { useAuth } from '../../hooks/auth';
 
 import { Container, Content } from './styles';
 
@@ -22,6 +24,7 @@ import api from '../../services/api';
 import { useToast } from '../../hooks/toast';
 
 const Subscriptions: React.FC = () => {
+  const { user } = useAuth();
   const formRef = useRef<FormHandles>(null);
   const { addToast } = useToast();
 
@@ -95,6 +98,9 @@ const Subscriptions: React.FC = () => {
 
           <Button type="submit">Enviar</Button>
         </Form>
+        <Link to={`${user ? '/brackets' : '/brackets/bracketDisplay'}`}>
+          Brackets
+        </Link>
       </Content>
     </Container>
   );

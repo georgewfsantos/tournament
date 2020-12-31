@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route as ReactRoute, RouteProps } from 'react-router-dom';
+import Header from '../components/Header';
 
 import { useAuth } from '../hooks/auth';
 
@@ -22,7 +23,10 @@ const Route: React.FC<RouteProperties> = ({
       {...rest}
       render={({ location }) => {
         return isPrivate === !!user ? (
-          <Component />
+          <>
+            <Header />
+            <Component />
+          </>
         ) : (
           <Redirect
             to={{

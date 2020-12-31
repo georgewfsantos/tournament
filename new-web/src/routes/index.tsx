@@ -18,7 +18,7 @@ const Routes: React.FC = () => {
       <Route path="/subscriptions" component={Subscriptions} />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
-      <Route path="/brackets" exact component={Brackets} />
+      <Route path="/brackets" exact component={Brackets} isPrivate />
       <Route path="/brackets/bracketDisplay" component={BracketDisplay} />
       <Route
         path="/brackets/bracketItem/:categoryId"

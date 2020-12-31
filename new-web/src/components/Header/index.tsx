@@ -3,9 +3,13 @@ import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/racket.svg';
 
+import { useAuth } from '../../hooks/auth';
+
 import { Container, Content } from './styles';
 
 const Header: React.FC = () => {
+  const { user } = useAuth();
+
   return (
     <Container>
       <Content>
@@ -23,9 +27,11 @@ const Header: React.FC = () => {
           <NavLink to="/brackets" activeStyle={{ color: '#32067c' }}>
             CHAVES
           </NavLink>
-          <NavLink to="/login" activeStyle={{ color: '#32067c' }}>
-            ADMIN
-          </NavLink>
+          {!user && (
+            <NavLink to="/" activeStyle={{ color: '#32067c' }}>
+              ADMIN
+            </NavLink>
+          )}
         </nav>
       </Content>
     </Container>
