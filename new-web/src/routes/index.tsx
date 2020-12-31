@@ -9,6 +9,7 @@ import Brackets from '../pages/Brackets';
 
 import Dashboard from '../pages/Dashboard';
 import BracketItem from '../pages/Brackets/BracketItem';
+import BracketDisplay from '../pages/Brackets/BracketDisplay';
 
 const Routes: React.FC = () => {
   return (
@@ -17,7 +18,8 @@ const Routes: React.FC = () => {
       <Route path="/subscriptions" component={Subscriptions} />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
-      <Route path="/brackets" exact component={Brackets} isPrivate />
+      <Route path="/brackets" exact component={Brackets} />
+      <Route path="/brackets/bracketDisplay" component={BracketDisplay} />
       <Route
         path="/brackets/bracketItem/:categoryId"
         component={BracketItem}

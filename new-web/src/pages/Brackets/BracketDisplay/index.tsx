@@ -10,7 +10,7 @@ interface BracketItemParams {
   categoryId: string;
 }
 
-const BracketItem: React.FC = () => {
+const BrackeDisplay: React.FC = () => {
   const { categoryId } = useParams<BracketItemParams>();
 
   const [players, setPlayers] = useState([]);
@@ -43,81 +43,81 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_1" />
+                    Player
                     <span className="score">76</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_2" />
+                    Player
                     <span className="score">82</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_3" />
+                    Player
                     <span className="score">64</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_4" />
+                    Player
                     <span className="score">56</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_5" />
+                    Player
                     <span className="score">68</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_6" />
+                    Player
                     <span className="score">54</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_7" />
+                    Player
                     <span className="score">74</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_8" />
+                    Player
                     <span className="score">92</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_9" />
+                    Player
                     <span className="score">78</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_10" />
+                    Player
                     <span className="score">80</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_11" />
+                    Player
                     <span className="score">64</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_12" />
+                    Player
                     <span className="score">63</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_13" />
+                    Player
                     <span className="score">70</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_14" />
+                    Player
                     <span className="score">59</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_15" />
+                    Player
                     <span className="score">64</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_16" />
+                    Player
                     <span className="score">68</span>
                   </li>
                 </ul>
@@ -130,41 +130,41 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_33" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_34" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_35" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_36" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_37" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_38" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_39" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_40" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
@@ -177,21 +177,21 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_53" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_54" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_55" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_56" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
@@ -206,11 +206,11 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup championship">
                   <li className="team team-top">
-                    <BracketInput name="player_57" />
+                    Player
                     <span className="vote-count">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_58" />
+                    Player
                     <span className="vote-count">&nbsp;</span>
                   </li>
                 </ul>
@@ -222,11 +222,11 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup championship">
                   <li className="team team-top">
-                    <BracketInput name="player_61" />
+                    Player
                     <span className="vote-count">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_62" />
+                    Player
                     <span className="vote-count">&nbsp;</span>
                   </li>
                 </ul>
@@ -238,11 +238,11 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup championship">
                   <li className="team team-top">
-                    <BracketInput name="player_59" />
+                    Player
                     <span className="vote-count">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_60" />
+                    Player
                     <span className="vote-count">&nbsp;</span>
                   </li>
                 </ul>
@@ -257,21 +257,21 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_49" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_50" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_51" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_52" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
@@ -284,41 +284,41 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_41" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_42" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_43" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_44" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_45" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_46" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_47" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_48" />
+                    Player
                     <span className="score">&nbsp;</span>
                   </li>
                 </ul>
@@ -330,81 +330,81 @@ const BracketItem: React.FC = () => {
                 </div>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_17" />
+                    Player
                     <span className="score">62</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_18" />
+                    Player
                     <span className="score">54</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_19" />
+                    Player
                     <span className="score">68</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_20" />
+                    Player
                     <span className="score">66</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_21" />
+                    Player
                     <span className="score">64</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_22" />
+                    Player
                     <span className="score">56</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_23" />
+                    Player
                     <span className="score">36</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_24" />
+                    Player
                     <span className="score">40</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_25" />
+                    Player
                     <span className="score">38</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_26" />
+                    Player
                     <span className="score">44</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_27" />
+                    Player
                     <span className="score">52</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_28" />
+                    Player
                     <span className="score">80</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_29" />
+                    Player
                     <span className="score">58</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_30" />
+                    Player
                     <span className="score">59</span>
                   </li>
                 </ul>
                 <ul className="matchup">
                   <li className="team team-top">
-                    <BracketInput name="player_31" />
+                    Player
                     <span className="score">74</span>
                   </li>
                   <li className="team team-bottom">
-                    <BracketInput name="player_32" />
+                    Player
                     <span className="score">111</span>
                   </li>
                 </ul>
@@ -424,4 +424,4 @@ const BracketItem: React.FC = () => {
   );
 };
 
-export default BracketItem;
+export default BrackeDisplay;
