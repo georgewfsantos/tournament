@@ -26,7 +26,12 @@ const Routes: React.FC = () => {
         component={BracketItem}
         isPrivate
       />
-      <Route path="/subscriptionList" component={SubscriptionList} isPrivate />
+      <Route
+        // path="/subscriptionList/:classId"
+        path="/subscriptionList"
+        component={SubscriptionList}
+        isPrivate
+      />
     </Switch>
   );
 };

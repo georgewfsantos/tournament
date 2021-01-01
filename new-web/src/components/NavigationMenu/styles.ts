@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #fff;
-  padding: 0 30px;
+  padding: 0 20px;
 `;
 
 export const Content = styled.div`
@@ -23,7 +22,7 @@ export const Content = styled.div`
     a {
       font-weight: 500;
       margin-right: 15px;
-      color: #232129cc;
+      color: rgba(35, 33, 41, 0.8);
       font-size: 15px;
       line-height: 18px;
       text-decoration: none;
@@ -35,28 +34,6 @@ export const Content = styled.div`
     aside {
       display: flex;
       align-items: center;
-    }
-  }
-`;
-
-export const Profile = styled.div`
-  display: flex;
-  margin-left: 20px;
-  padding-left: 20px;
-  div {
-    text-align: right;
-    margin-right: 10px;
-    strong {
-      display: block;
-      color: #666666;
-    }
-    button {
-      display: block;
-      background: none;
-      border: none;
-      margin-top: 2px;
-      font-size: 14px;
-      color: #de3b3b;
     }
   }
 `;
