@@ -10,6 +10,7 @@ import Brackets from '../pages/Brackets';
 import Dashboard from '../pages/Dashboard';
 import BracketItem from '../pages/Brackets/BracketItem';
 import BracketDisplay from '../pages/Brackets/BracketDisplay';
+import SubscriptionList from '../pages/SubscriptionList';
 
 const Routes: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const Routes: React.FC = () => {
         component={BracketItem}
         isPrivate
       />
+      <Route path="/subscriptionList" component={SubscriptionList} isPrivate />
     </Switch>
   );
 };

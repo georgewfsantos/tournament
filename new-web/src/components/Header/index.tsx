@@ -17,9 +17,10 @@ const Header: React.FC = () => {
           <NavLink to="/">
             <img src={logo} alt="Tennis Racket" />
           </NavLink>
+
           <NavLink
             className="first-link"
-            to="/subscriptions"
+            to={`${user ? '/subscriptionList' : '/subscriptions'}`}
             activeStyle={{ color: '#32067c' }}
           >
             INSCRIÇÕES
