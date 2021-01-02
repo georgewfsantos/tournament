@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     <Container>
       <Content>
         <nav>
-          <NavLink to="/">
+          <NavLink to="/signIn">
             <img src={logo} alt="Tennis Racket" />
           </NavLink>
 
@@ -23,16 +23,23 @@ const Header: React.FC = () => {
             to={`${user ? '/subscriptionList' : '/subscriptions'}`}
             activeStyle={{ color: '#32067c' }}
           >
-            INSCRIÇÕES
+            Inscrições
           </NavLink>
           <NavLink to="/brackets" activeStyle={{ color: '#32067c' }}>
-            CHAVES
+            Chaves
           </NavLink>
           {!user && (
-            <NavLink to="/" activeStyle={{ color: '#32067c' }}>
-              ADMIN
+            <NavLink to="/signIn" activeStyle={{ color: '#32067c' }}>
+              Admin
             </NavLink>
           )}
+
+          <NavLink
+            to={`${user ? '/editResults' : 'results'}`}
+            activeStyle={{ color: '#32067c' }}
+          >
+            Results
+          </NavLink>
         </nav>
       </Content>
     </Container>

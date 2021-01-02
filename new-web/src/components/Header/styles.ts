@@ -27,6 +27,7 @@ export const Content = styled.div`
       font-size: 15px;
       line-height: 18px;
       text-decoration: none;
+      text-transform: uppercase;
     }
 
     a.first-link {
