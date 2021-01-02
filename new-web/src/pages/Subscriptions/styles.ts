@@ -27,7 +27,7 @@ export const Content = styled.div`
     align-items: center;
     justify-content: center;
 
-    margin: 30px 0;
+    margin: 10px 0;
     flex-direction: column;
 
     h1 {
