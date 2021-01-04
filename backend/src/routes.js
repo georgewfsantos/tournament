@@ -19,6 +19,8 @@ routes.post('/sessions', SessionController.store);
 
 routes.get('/categories', CategoryController.index);
 
+routes.get('/players', PlayerController.store);
+
 routes.use(authMiddleware);
 
 routes.get('/players', PlayerController.index);

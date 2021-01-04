@@ -50,8 +50,11 @@ class PlayerController {
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
+      email: Yup.string().email('Digite um formato válido de email'),
       category_id: Yup.number().required(),
-      message: Yup.string(),
+      phone_number: Yup.string().required('Telefone é obrigatório'),
+      guests: Yup.string(),
+      restrictions: Yup.string(),
     });
 
     if (!(await schema.isValid(req.body))) {
@@ -60,13 +63,23 @@ class PlayerController {
         .json({ error: 'Validation failed. Check the information provided' });
     }
 
-    const { name, category_id, message } = req.body;
+    const {
+      name,
+      email,
+      category_id,
+      phone_number,
+      guests,
+      restrictions,
+    } = req.body;
 
     try {
       const player = await Player.create({
         name,
+        email,
         category_id,
-        message,
+        phone_number,
+        guests,
+        restrictions,
       });
       return res.json(player);
     } catch (err) {
