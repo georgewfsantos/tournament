@@ -17,5 +17,12 @@ export const Container = styled.div`
       transform: scale(1.1);
       box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
     }
+
+    button {
+      color: #32067c;
+      text-transform: capitalize;
+      text-decoration: double;
+      font-weight: 500;
+    }
   }
 `;

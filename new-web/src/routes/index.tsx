@@ -3,6 +3,8 @@ import { Switch } from 'react-router-dom';
 
 import Route from './Route';
 
+import { useAuth } from '../hooks/auth';
+
 import SignIn from '../pages/SignIn';
 import Subscriptions from '../pages/Subscriptions';
 import Brackets from '../pages/Brackets';
@@ -15,13 +17,15 @@ import Results from '../pages/Results';
 import EditResults from '../pages/EditResults';
 
 const Routes: React.FC = () => {
+  const { user } = useAuth();
+
   return (
     <Switch>
       <Route path="/signIn" component={SignIn} />
       <Route path="/subscriptions" component={Subscriptions} />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
-      <Route path="/brackets" exact component={Brackets} />
+      <Route path="/brackets" exact component={Brackets} isPrivate={!!user} />
       <Route path="/brackets/bracketDisplay" component={BracketDisplay} />
       <Route
         path="/brackets/bracketItem/:categoryId"
