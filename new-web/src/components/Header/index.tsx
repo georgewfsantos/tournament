@@ -38,7 +38,7 @@ const Header: React.FC = () => {
             to={`${user ? '/editResults' : 'results'}`}
             activeStyle={{ color: '#32067c' }}
           >
-            Results
+            Resultados
           </NavLink>
         </nav>
       </Content>

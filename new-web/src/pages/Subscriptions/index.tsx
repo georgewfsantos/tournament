@@ -48,7 +48,7 @@ const Subscriptions: React.FC = () => {
           abortEarly: false,
         });
 
-        await api.post('/route', data);
+        await api.post('/players', data);
 
         addToast({
           type: 'success',
