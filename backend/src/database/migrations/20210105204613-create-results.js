@@ -11,7 +11,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      classe: {
+      category: {
         type: Sequelize.STRING,
         allowNull: false,
       },
