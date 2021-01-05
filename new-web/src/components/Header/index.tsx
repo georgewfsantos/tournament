@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/racket.svg';
 
 import { useAuth } from '../../hooks/auth';
+import api from '../../services/api';
+
+import { Category } from '../NavigationMenu';
 
 import { Container, Content } from './styles';
 
 const Header: React.FC = () => {
   const { user } = useAuth();
+  const [classes, setClasses] = useState<Category[]>();
+
+  useEffect(() => {
+    async function loadCategories() {
+      const response = await api.get('/categories');
+      setClasses(response.data);
+    }
+    loadCategories();
+  }, []);
 
   return (
     <Container>
@@ -20,7 +32,7 @@ const Header: React.FC = () => {
 
           <NavLink
             className="first-link"
-            to={`${user ? '/subscriptionList' : '/subscriptions'}`}
+            to={`${user ? '/subscriptionView' : '/subscriptions'}`}
             activeStyle={{ color: '#32067c' }}
           >
             Inscrições

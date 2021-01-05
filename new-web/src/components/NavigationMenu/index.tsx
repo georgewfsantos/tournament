@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import api from '../../services/api';
+
 import { Container, Content } from './styles';
 
+export interface Category {
+  id: number;
+  name: string;
+}
+
 const NavigationMenu: React.FC = () => {
-  const [classes, setClasses] = useState<string[]>([]);
+  const [classes, setClasses] = useState<Category[]>([]);
 
   useEffect(() => {
-    const classesList = ['1', '2', '3', '4'];
-    setClasses(classesList);
+    async function loadCategories() {
+      const response = await api.get('/categories');
+      setClasses(response.data);
+    }
+
+    loadCategories();
   }, []);
 
   return (
@@ -16,7 +27,13 @@ const NavigationMenu: React.FC = () => {
       <Content>
         <nav>
           {classes.map(c => (
-            <NavLink to={`/subscriptionsList/${c}`}>{c}</NavLink>
+            <NavLink
+              to={`/subscriptionList/${c.id}`}
+              key={c.id}
+              activeStyle={{ color: '#32067c', textDecoration: 'underline' }}
+            >
+              {c.name}
+            </NavLink>
           ))}
         </nav>
       </Content>

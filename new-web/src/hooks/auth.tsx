@@ -43,6 +43,8 @@ const AuthProvider: React.FC = ({ children }) => {
     localStorage.setItem('@tournamet:user', JSON.stringify(user));
 
     setUserData({ token, user });
+
+    api.defaults.headers.Authorization = `Bearer ${token}`;
   }, []);
 
   const signOut = useCallback(() => {

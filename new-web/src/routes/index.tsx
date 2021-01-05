@@ -7,12 +7,13 @@ import { useAuth } from '../hooks/auth';
 
 import SignIn from '../pages/SignIn';
 import Subscriptions from '../pages/Subscriptions';
+import SubscriptionView from '../pages/SubscriptionView';
+import SubscriptionList from '../pages/SubscriptionView/SubscriptionList';
+
 import Brackets from '../pages/Brackets';
 
-import Dashboard from '../pages/Dashboard';
 import BracketItem from '../pages/Brackets/BracketItem';
 import BracketDisplay from '../pages/Brackets/BracketDisplay';
-import SubscriptionList from '../pages/SubscriptionList';
 import Results from '../pages/Results';
 import EditResults from '../pages/EditResults';
 
@@ -23,8 +24,6 @@ const Routes: React.FC = () => {
     <Switch>
       <Route path="/signIn" component={SignIn} />
       <Route path="/subscriptions" component={Subscriptions} />
-
-      <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/brackets" exact component={Brackets} isPrivate={!!user} />
       <Route path="/brackets/bracketDisplay" component={BracketDisplay} />
       <Route
@@ -33,8 +32,13 @@ const Routes: React.FC = () => {
         isPrivate
       />
       <Route
-        // path="/subscriptionList/:classId"
-        path="/subscriptionList"
+        path="/subscriptionView"
+        exact
+        component={SubscriptionView}
+        isPrivate
+      />
+      <Route
+        path="/subscriptionView/subscriptionList/:categoryId"
         component={SubscriptionList}
         isPrivate
       />
@@ -44,7 +48,6 @@ const Routes: React.FC = () => {
         component={EditResults}
         isPrivate
       />
-
       <Route
         // path="/subscriptionList/:classId"
         path="/results"

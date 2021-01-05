@@ -12,11 +12,19 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
   color: #232129cc;
   background-color: #fefefe;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+
+  max-width: 90%;
+
+  #list-header {
+    border: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ListRow = styled.div`
