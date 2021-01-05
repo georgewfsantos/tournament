@@ -6,8 +6,9 @@ import Player from '../app/models/Player';
 import User from '../app/models/User';
 import Category from '../app/models/Category';
 import BracketPlayer from '../app/models/Bracketplayer';
+import Result from '../app/models/Result';
 
-const models = [Player, User, Category, BracketPlayer];
+const models = [Player, User, Category, BracketPlayer, Result];
 
 class Database {
   constructor() {

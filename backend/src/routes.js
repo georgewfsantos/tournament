@@ -6,6 +6,7 @@ import PlayerController from './app/controllers/PlayerController';
 import SessionController from './app/controllers/SessionController';
 import CategoryController from './app/controllers/CategoryController';
 import BracketController from './app/controllers/BracketController';
+import ResultController from './app/controllers/ResultController';
 
 const routes = new Router();
 
@@ -19,6 +20,8 @@ routes.get('/categories', CategoryController.index);
 
 routes.post('/players', PlayerController.store);
 
+routes.get('/results', ResultController.index);
+
 routes.use(authMiddleware);
 
 routes.get('/players', PlayerController.index);
@@ -29,5 +32,7 @@ routes.delete('/players/:id', PlayerController.delete);
 routes.post('/categories', CategoryController.store);
 
 routes.post('/brackets/:class_id', BracketController.store);
+
+routes.post('/results', ResultController.store);
 
 export default routes;

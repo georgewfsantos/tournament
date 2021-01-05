@@ -5,7 +5,7 @@ class Result extends Model {
     super.init(
       {
         match_date: Sequelize.DATE,
-        category: Sequelize.INTEGER,
+        category: Sequelize.STRING,
         player_1: Sequelize.STRING,
         player_1_score_1: Sequelize.INTEGER,
         player_1_score_2: Sequelize.INTEGER,
