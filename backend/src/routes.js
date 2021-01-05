@@ -9,8 +9,6 @@ import BracketController from './app/controllers/BracketController';
 
 const routes = new Router();
 
-routes.post('/players', PlayerController.store);
-
 routes.get('/categories', CategoryController.index);
 
 // routes.get('/bracket1', BracketPlayerController.index);
@@ -19,7 +17,7 @@ routes.post('/sessions', SessionController.store);
 
 routes.get('/categories', CategoryController.index);
 
-routes.get('/players', PlayerController.store);
+routes.post('/players', PlayerController.store);
 
 routes.use(authMiddleware);
 

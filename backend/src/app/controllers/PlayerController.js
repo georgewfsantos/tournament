@@ -10,9 +10,8 @@ class PlayerController {
     const players = categoryNumber
       ? await Player.findAll({
           where: {
-            category: categoryNumber,
+            category_id: categoryNumber,
           },
-          attributes: ['id', 'name', 'message'],
           include: [
             {
               model: Category,
@@ -22,7 +21,6 @@ class PlayerController {
           ],
         })
       : await Player.findAll({
-          attributes: ['id', 'name', 'message'],
           include: [
             {
               model: Category,

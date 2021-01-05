@@ -21,7 +21,9 @@ class CategoryController {
     const { id } = req.params;
 
     if (!id) {
-      return res.json({ error: `No category with id ${id} was found` });
+      return res.json({
+        error: `No category with id ${id} was found`,
+      });
     }
 
     const player = await Category.findByPk(id);
