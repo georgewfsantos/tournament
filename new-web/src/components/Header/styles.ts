@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken, lighten } from 'polished';
 
 export const Container = styled.div`
   background: #fff;
@@ -7,8 +8,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   height: 64px;
-  max-width: 900px;
   margin: 0 auto;
+  max-width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,10 +34,6 @@ export const Content = styled.div`
     a.first-link {
       margin-left: 10px;
     }
-    aside {
-      display: flex;
-      align-items: center;
-    }
   }
 `;
 
@@ -44,20 +41,20 @@ export const Profile = styled.div`
   display: flex;
   margin-left: 20px;
   padding-left: 20px;
-  div {
-    text-align: right;
-    margin-right: 10px;
-    strong {
-      display: block;
-      color: #666666;
+
+  button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 0;
+    color: #c5392f;
+
+    &:hover {
+      color: ${lighten(0.2, '#c5392f')};
     }
-    button {
-      display: block;
-      background: none;
-      border: none;
-      margin-top: 2px;
-      font-size: 14px;
-      color: #de3b3b;
+
+    svg {
+      margin-left: 8px;
     }
   }
 `;

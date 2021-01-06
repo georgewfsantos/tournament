@@ -1,26 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { FiLogOut } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/racket.svg';
 
 import { useAuth } from '../../hooks/auth';
-import api from '../../services/api';
 
-import { Category } from '../NavigationMenu';
-
-import { Container, Content } from './styles';
+import { Container, Content, Profile } from './styles';
 
 const Header: React.FC = () => {
-  const { user } = useAuth();
-  const [classes, setClasses] = useState<Category[]>();
-
-  useEffect(() => {
-    async function loadCategories() {
-      const response = await api.get('/categories');
-      setClasses(response.data);
-    }
-    loadCategories();
-  }, []);
+  const { user, signOut } = useAuth();
 
   return (
     <Container>
@@ -53,6 +42,14 @@ const Header: React.FC = () => {
             Resultados
           </NavLink>
         </nav>
+        {user && (
+          <Profile>
+            <button type="button" onClick={signOut}>
+              Sair
+              <FiLogOut size={20} color="#c5392f" />
+            </button>
+          </Profile>
+        )}
       </Content>
     </Container>
   );

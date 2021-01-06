@@ -1,13 +1,13 @@
 import React from 'react';
 
-import MatchBox from '../../components/MatchBox';
+import EditableMatchBox from './EditableMatchBox';
 
 import { Container } from './styles';
 
 const EditResults: React.FC = () => {
   return (
     <Container>
-      <MatchBox />
+      <EditableMatchBox />
     </Container>
   );
 };
