@@ -44,7 +44,7 @@ const AuthProvider: React.FC = ({ children }) => {
 
     setUserData({ token, user });
 
-    api.defaults.headers.Authorization = `Bearer ${token}`;
+    api.defaults.headers.authorization = `Bearer ${token}`;
   }, []);
 
   const signOut = useCallback(() => {

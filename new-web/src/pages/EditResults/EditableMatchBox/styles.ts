@@ -48,6 +48,7 @@ export const MainContent = styled.div`
 
       &:hover {
         color: ${lighten(0.2, '#32067c')};
+        text-decoration: underline;
       }
 
       svg {
@@ -66,8 +67,6 @@ export const Container = styled.div`
   border-radius: 5px 5px 0 0;
 
   margin: 20px auto; // delete this later
-
-  text-transform: uppercase;
 `;
 
 export const BoxHeader = styled.div`
@@ -83,32 +82,23 @@ export const BoxHeader = styled.div`
 
   border-radius: 5px 5px 0 0;
 
-  text-transform: uppercase;
-
-  p {
+  .category-name,
+  .date {
     color: #fefefe;
-    font-size: 12px;
     font-weight: 500;
+  }
 
-    input {
-      font-size: 14px;
+  .category-name {
+    color: #fefefe;
+    font-size: 16px;
+    font-weight: 500;
+    &::placeholder {
+      font-size: 16px;
     }
+  }
 
-    .category-name,
-    .date {
-      color: #fefefe;
-      font-weight: 500;
-    }
-
-    .category-name {
-      &::placeholder {
-        font-size: 16px;
-      }
-    }
-
-    .date {
-      text-align: end;
-    }
+  .date {
+    text-align: end;
   }
 `;
 
@@ -127,7 +117,6 @@ export const PlayerInfo = styled.div`
   padding: 5px;
 
   .player {
-    text-transform: uppercase;
     font-size: 16px;
   }
 `;
