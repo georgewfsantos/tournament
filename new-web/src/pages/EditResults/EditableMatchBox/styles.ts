@@ -1,5 +1,5 @@
-import { lighten } from 'polished';
 import styled from 'styled-components';
+import { lighten } from 'polished';
 import BracketInput from '../../Brackets/components/BracketInput';
 
 export const MainContent = styled.div`

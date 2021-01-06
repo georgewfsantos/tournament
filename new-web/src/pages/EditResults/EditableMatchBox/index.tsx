@@ -24,7 +24,7 @@ import api from '../../../services/api';
 import getValidationErrors from '../../../utils/getValidationErrors';
 
 interface ResultFormData {
-  catgegory: string;
+  category: string;
   match_date: Date;
   player_1: string;
   player_1_score_1: string;
@@ -129,7 +129,6 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_1_score_3"
-                    defaultValue="0"
                   />
                 </SetScore>
               </PlayerScore>
@@ -165,7 +164,6 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_2_score_3"
-                    defaultValue="0"
                   />
                 </SetScore>
               </PlayerScore>

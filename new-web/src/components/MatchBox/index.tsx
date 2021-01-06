@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Result } from '../../pages/Results';
+
 import {
   Container,
   BoxHeader,
@@ -10,29 +12,37 @@ import {
   SetScore,
 } from './styles';
 
-const MatchBox: React.FC = () => {
+interface MathcBoxProps {
+  result: Result;
+}
+
+const MatchBox: React.FC<MathcBoxProps> = ({ result }) => {
   return (
     <Container>
       <BoxHeader>
-        <p>Classe 1</p>
-        <p>25/02/2021</p>
+        <p>{result.category}</p>
+        <p>{result.match_date}</p>
       </BoxHeader>
       <Content>
         <PlayerInfo>
-          <PlayerName>Jhon Doe</PlayerName>
+          <PlayerName>{result.player_1}</PlayerName>
           <PlayerScore>
-            <SetScore>6</SetScore>
-            <SetScore>4</SetScore>
-            <SetScore>10</SetScore>
+            <SetScore>{result.player_1_score_1}</SetScore>
+            <SetScore>{result.player_1_score_2}</SetScore>
+            {result.player_1_score_3 && (
+              <SetScore>{result.player_1_score_3}</SetScore>
+            )}
           </PlayerScore>
         </PlayerInfo>
 
         <PlayerInfo className="player-two">
-          <PlayerName>Jhon Doeker</PlayerName>
+          <PlayerName>{result.player_2}</PlayerName>
           <PlayerScore>
-            <SetScore>3</SetScore>
-            <SetScore>6</SetScore>
-            <SetScore>7</SetScore>
+            <SetScore>{result.player_2_score_1}</SetScore>
+            <SetScore>{result.player_2_score_2}</SetScore>
+            {result.player_2_score_3 && (
+              <SetScore>{result.player_2_score_3}</SetScore>
+            )}
           </PlayerScore>
         </PlayerInfo>
       </Content>
