@@ -9,7 +9,7 @@ class ResultController {
           where: {
             category: categoryName,
           },
-          order: ['match_date', 'ASC'],
+          order: [['match_date', 'ASC']],
         })
       : await Result.findAll();
 
