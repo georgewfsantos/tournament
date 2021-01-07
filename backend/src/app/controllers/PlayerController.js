@@ -5,12 +5,12 @@ import Category from '../models/Category';
 
 class PlayerController {
   async index(req, res) {
-    const { categoryNumber } = req.query;
+    const { category_id } = req.params;
 
-    const players = categoryNumber
+    const players = category_id
       ? await Player.findAll({
           where: {
-            category_id: categoryNumber,
+            category_id,
           },
           include: [
             {

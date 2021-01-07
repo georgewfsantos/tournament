@@ -24,7 +24,7 @@ routes.get('/results', ResultController.index);
 
 routes.use(authMiddleware);
 
-routes.get('/players', PlayerController.index);
+routes.get('/players/:category_id', PlayerController.index);
 routes.get('/players/:id', PlayerController.show);
 routes.put('/players/:id', PlayerController.update);
 routes.delete('/players/:id', PlayerController.delete);
@@ -32,6 +32,7 @@ routes.delete('/players/:id', PlayerController.delete);
 routes.post('/categories', CategoryController.store);
 
 routes.post('/brackets/:category_id', BracketController.store);
+routes.get('/brackets/:category_id', BracketController.show);
 // routes.put('/brackets/:category_id', BracketController.update);
 
 routes.post('/results', ResultController.store);
