@@ -1,5 +1,3 @@
-// import * as Yup from 'yup';
-
 import BracketPlayer from '../models/Bracketplayer';
 import Category from '../models/Category';
 
@@ -11,35 +9,27 @@ class BracketController {
   }
 
   async store(req, res) {
-    const { class_id } = req.params;
+    const { category_id } = req.params;
 
-    const category = await Category.findByPk(class_id);
+    const category = await Category.findByPk(category_id);
 
-    const CategoryName = category.name;
-
-    const foundBracket = await BracketPlayer.findOne({
-      where: {
-        name: CategoryName,
-      },
-    });
-
-    if (!class_id) {
+    if (!category) {
       return res.status(401).json({ error: 'Category not found' });
     }
 
-    if (foundBracket) {
-      return res.status(400).json({
-        error:
-          'You are not allowed to create the same bracket twice. Please , just update the players',
-      });
-    }
-
-    const bracket = await BracketPlayer.create({
-      name: category.name,
-      ...req.body,
+    const foundBracket = await BracketPlayer.findOne({
+      where: {
+        name: category.name,
+      },
     });
 
-    return res.json(bracket);
+    if (!foundBracket) {
+      await BracketPlayer.create(req.body);
+    }
+
+    const updatedBracket = await foundBracket.update(req.body);
+
+    return res.json(updatedBracket);
   }
 }
 

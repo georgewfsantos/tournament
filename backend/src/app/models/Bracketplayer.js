@@ -1,9 +1,73 @@
-import { Model } from 'sequelize';
+import Sequelize, { Model } from 'sequelize';
 
 class Bracketplayer extends Model {
   static init(sequelize) {
     super.init(
-      {},
+      {
+        player_1: Sequelize.STRING,
+        player_2: Sequelize.STRING,
+        player_3: Sequelize.STRING,
+        player_4: Sequelize.STRING,
+        player_5: Sequelize.STRING,
+        player_6: Sequelize.STRING,
+        player_7: Sequelize.STRING,
+        player_8: Sequelize.STRING,
+        player_9: Sequelize.STRING,
+        player_10: Sequelize.STRING,
+        player_11: Sequelize.STRING,
+        player_12: Sequelize.STRING,
+        player_13: Sequelize.STRING,
+        player_14: Sequelize.STRING,
+        player_15: Sequelize.STRING,
+        player_16: Sequelize.STRING,
+        player_17: Sequelize.STRING,
+        player_18: Sequelize.STRING,
+        player_19: Sequelize.STRING,
+        player_20: Sequelize.STRING,
+        player_21: Sequelize.STRING,
+        player_22: Sequelize.STRING,
+        player_23: Sequelize.STRING,
+        player_24: Sequelize.STRING,
+        player_25: Sequelize.STRING,
+        player_26: Sequelize.STRING,
+        player_27: Sequelize.STRING,
+        player_28: Sequelize.STRING,
+        player_29: Sequelize.STRING,
+        player_30: Sequelize.STRING,
+        player_31: Sequelize.STRING,
+        player_32: Sequelize.STRING,
+        player_33: Sequelize.STRING,
+        player_34: Sequelize.STRING,
+        player_35: Sequelize.STRING,
+        player_36: Sequelize.STRING,
+        player_37: Sequelize.STRING,
+        player_38: Sequelize.STRING,
+        player_39: Sequelize.STRING,
+        player_40: Sequelize.STRING,
+        player_41: Sequelize.STRING,
+        player_42: Sequelize.STRING,
+        player_43: Sequelize.STRING,
+        player_44: Sequelize.STRING,
+        player_45: Sequelize.STRING,
+        player_46: Sequelize.STRING,
+        player_47: Sequelize.STRING,
+        player_48: Sequelize.STRING,
+        player_49: Sequelize.STRING,
+        player_50: Sequelize.STRING,
+        player_51: Sequelize.STRING,
+        player_52: Sequelize.STRING,
+        player_53: Sequelize.STRING,
+        player_54: Sequelize.STRING,
+        player_55: Sequelize.STRING,
+        player_56: Sequelize.STRING,
+        player_57: Sequelize.STRING,
+        player_58: Sequelize.STRING,
+        player_59: Sequelize.STRING,
+        player_60: Sequelize.STRING,
+        player_61: Sequelize.STRING,
+        player_62: Sequelize.STRING,
+        player_63: Sequelize.STRING,
+      },
       {
         sequelize,
       }
@@ -12,6 +76,12 @@ class Bracketplayer extends Model {
   }
 
   static associate(models) {
+    this.belongsTo(models.Category, {
+      foreignKey: 'name',
+      // as: 'name',
+    });
+
+    /*
     const players = [
       'player_1_id',
       'player_2_id',
@@ -78,147 +148,14 @@ class Bracketplayer extends Model {
       'player_63_id',
     ];
 
-    players.map((player, index) =>
+     players.map((player, index) =>
       this.belongsTo(models.Player, {
         foreignKey: player,
         as: `player_${index + 1}`,
       })
     );
-
-    this.belongsTo(models.Category, {
-      foreignKey: 'name',
-      // as: 'name',
-    });
+    */
   }
-  /* this.belongsTo(models.Player, {
-      foreignKey: 'player_1_id',
-      as: 'player_1',
-    }); */
-
-  /* this.belongsTo(models.Player, {
-      foreignKey: 'player_2_id',
-      as: 'player_2',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_3_id',
-      as: 'player_3',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_4_id',
-      as: 'player_4',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_5_id',
-      as: 'player_5',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_6_id',
-      as: 'player_6',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_7_id',
-      as: 'player_7',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_8_id',
-      as: 'player_8',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_9_id',
-      as: 'player_9',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_10_id',
-      as: 'player_10',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_11_id',
-      as: 'player_11',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_12_id',
-      as: 'player_12',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_13_id',
-      as: 'player_13',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_14_id',
-      as: 'player_14',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_15_id',
-      as: 'player_15',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_16_id',
-      as: 'player_16',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_17_id',
-      as: 'player_17',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_18_id',
-      as: 'player_18',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_19_id',
-      as: 'player_19',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_20_id',
-      as: 'player_20',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_21_id',
-      as: 'player_21',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_22_id',
-      as: 'player_22',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_23_id',
-      as: 'player_23',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_24_id',
-      as: 'player_24',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_25_id',
-      as: 'player_25',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_26_id',
-      as: 'player_26',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_27_id',
-      as: 'player_27',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_28_id',
-      as: 'player_28',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_29_id',
-      as: 'player_29',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_30_id',
-      as: 'player_30',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_31_id',
-      as: 'player_31',
-    });
-    this.belongsTo(models.Player, {
-      foreignKey: 'player_32_id',
-      as: 'player_32',
-    }); */
 }
 
 export default Bracketplayer;

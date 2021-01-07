@@ -77,6 +77,7 @@ class CategoryController {
     const { name } = await category.update(req.body);
 
     return res.json({
+      id,
       name,
     });
   }

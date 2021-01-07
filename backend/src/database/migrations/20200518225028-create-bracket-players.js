@@ -14,447 +14,257 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
       },
-      player_1_id: {
-        type: Sequelize.INTEGER,
+      player_1: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_2_id: {
-        type: Sequelize.INTEGER,
+      player_2: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_3_id: {
-        type: Sequelize.INTEGER,
+      player_3: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_4_id: {
-        type: Sequelize.INTEGER,
+      player_4: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_5_id: {
-        type: Sequelize.INTEGER,
+      player_5: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_6_id: {
-        type: Sequelize.INTEGER,
+      player_6: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_7_id: {
-        type: Sequelize.INTEGER,
+      player_7: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_8_id: {
-        type: Sequelize.INTEGER,
+      player_8: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_9_id: {
-        type: Sequelize.INTEGER,
+      player_9: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_10_id: {
-        type: Sequelize.INTEGER,
+      player_10: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_11_id: {
-        type: Sequelize.INTEGER,
+      player_11: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_12_id: {
-        type: Sequelize.INTEGER,
+      player_12: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_13_id: {
-        type: Sequelize.INTEGER,
+      player_13: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_14_id: {
-        type: Sequelize.INTEGER,
+      player_14: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_15_id: {
-        type: Sequelize.INTEGER,
+      player_15: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_16_id: {
-        type: Sequelize.INTEGER,
+      player_16: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_17_id: {
-        type: Sequelize.INTEGER,
+      player_17: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_18_id: {
-        type: Sequelize.INTEGER,
+      player_18: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_19_id: {
-        type: Sequelize.INTEGER,
+      player_19: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_20_id: {
-        type: Sequelize.INTEGER,
+      player_20: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_21_id: {
-        type: Sequelize.INTEGER,
+      player_21: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_22_id: {
-        type: Sequelize.INTEGER,
+      player_22: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_23_id: {
-        type: Sequelize.INTEGER,
+      player_23: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_24_id: {
-        type: Sequelize.INTEGER,
+      player_24: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_25_id: {
-        type: Sequelize.INTEGER,
+      player_25: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_26_id: {
-        type: Sequelize.INTEGER,
+      player_26: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_27_id: {
-        type: Sequelize.INTEGER,
+      player_27: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_28_id: {
-        type: Sequelize.INTEGER,
+      player_28: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_29_id: {
-        type: Sequelize.INTEGER,
+      player_29: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_30_id: {
-        type: Sequelize.INTEGER,
+      player_30: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_31_id: {
-        type: Sequelize.INTEGER,
+      player_31: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-
-      player_32_id: {
-        type: Sequelize.INTEGER,
+      player_32: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_33_id: {
-        type: Sequelize.INTEGER,
+      player_33: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_34_id: {
-        type: Sequelize.INTEGER,
+      player_34: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_35_id: {
-        type: Sequelize.INTEGER,
+      player_35: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_36_id: {
-        type: Sequelize.INTEGER,
+      player_36: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_37_id: {
-        type: Sequelize.INTEGER,
+      player_37: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_38_id: {
-        type: Sequelize.INTEGER,
+      player_38: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_39_id: {
-        type: Sequelize.INTEGER,
+      player_39: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_40_id: {
-        type: Sequelize.INTEGER,
+      player_40: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_41_id: {
-        type: Sequelize.INTEGER,
+      player_41: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_42_id: {
-        type: Sequelize.INTEGER,
+      player_42: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_43_id: {
-        type: Sequelize.INTEGER,
+      player_43: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_44_id: {
-        type: Sequelize.INTEGER,
+      player_44: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_45_id: {
-        type: Sequelize.INTEGER,
+      player_45: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_46_id: {
-        type: Sequelize.INTEGER,
+      player_46: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_47_id: {
-        type: Sequelize.INTEGER,
+      player_47: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_48_id: {
-        type: Sequelize.INTEGER,
+      player_48: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_49_id: {
-        type: Sequelize.INTEGER,
+      player_49: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_50_id: {
-        type: Sequelize.INTEGER,
+      player_50: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_51_id: {
-        type: Sequelize.INTEGER,
+      player_51: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_52_id: {
-        type: Sequelize.INTEGER,
+      player_52: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_53_id: {
-        type: Sequelize.INTEGER,
+      player_53: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_54_id: {
-        type: Sequelize.INTEGER,
+      player_54: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_55_id: {
-        type: Sequelize.INTEGER,
+      player_55: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_56_id: {
-        type: Sequelize.INTEGER,
+      player_56: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_57_id: {
-        type: Sequelize.INTEGER,
+      player_57: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_58_id: {
-        type: Sequelize.INTEGER,
+      player_58: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_59_id: {
-        type: Sequelize.INTEGER,
+      player_59: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_60_id: {
-        type: Sequelize.INTEGER,
+      player_60: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_61_id: {
-        type: Sequelize.INTEGER,
+      player_61: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_62_id: {
-        type: Sequelize.INTEGER,
+      player_62: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
-      player_63_id: {
-        type: Sequelize.INTEGER,
+      player_63: {
+        type: Sequelize.STRING,
         unique: true,
-        references: { model: 'players', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       },
       created_at: {
         type: Sequelize.DATE,

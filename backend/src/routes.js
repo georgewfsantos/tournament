@@ -31,7 +31,8 @@ routes.delete('/players/:id', PlayerController.delete);
 
 routes.post('/categories', CategoryController.store);
 
-routes.post('/brackets/:class_id', BracketController.store);
+routes.post('/brackets/:category_id', BracketController.store);
+// routes.put('/brackets/:category_id', BracketController.update);
 
 routes.post('/results', ResultController.store);
 
