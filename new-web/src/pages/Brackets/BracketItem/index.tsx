@@ -1,38 +1,197 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import './styles.css';
 import { Form } from '@unform/web';
+import { FormHandles } from '@unform/core';
 import api from '../../../services/api';
+import { useToast } from '../../../hooks/toast';
+
 import BracketInput from '../components/BracketInput';
+
+import './styles.css';
 
 interface BracketItemParams {
   categoryId: string;
 }
 
+interface BracketFormat {
+  name: string;
+  player_1: string;
+  player_2: string;
+  player_3: string;
+  player_4: string;
+  player_5: string;
+  player_6: string;
+  player_7: string;
+  player_8: string;
+  player_9: string;
+  player_10: string;
+  player_11: string;
+  player_12: string;
+  player_13: string;
+  player_14: string;
+  player_15: string;
+  player_16: string;
+  player_17: string;
+  player_18: string;
+  player_19: string;
+  player_20: string;
+  player_21: string;
+  player_22: string;
+  player_23: string;
+  player_24: string;
+  player_25: string;
+  player_26: string;
+  player_27: string;
+  player_28: string;
+  player_29: string;
+  player_30: string;
+  player_31: string;
+  player_32: string;
+  player_33: string;
+  player_34: string;
+  player_35: string;
+  player_36: string;
+  player_37: string;
+  player_38: string;
+  player_39: string;
+  player_40: string;
+  player_41: string;
+  player_42: string;
+  player_43: string;
+  player_44: string;
+  player_45: string;
+  player_46: string;
+  player_47: string;
+  player_48: string;
+  player_49: string;
+  player_50: string;
+  player_51: string;
+  player_52: string;
+  player_53: string;
+  player_54: string;
+  player_55: string;
+  player_56: string;
+  player_57: string;
+  player_58: string;
+  player_59: string;
+  player_60: string;
+  player_61: string;
+  player_62: string;
+  player_63: string;
+}
+
 const BracketItem: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
   const { categoryId } = useParams<BracketItemParams>();
 
-  const [players, setPlayers] = useState([]);
+  const { addToast } = useToast();
+
+  const [players, setPlayers] = useState<BracketFormat>({} as BracketFormat);
 
   useEffect(() => {
     async function loadPlayers() {
-      const response = await api.get(`/bracket${categoryId}`);
+      const response = await api.get(`/brackets/${categoryId}`);
 
-      setPlayers(response.data[0]);
+      const bracketObject = {
+        player_1: players.player_1,
+        player_2: players.player_2,
+        player_3: players.player_3,
+        player_4: players.player_4,
+        player_5: players.player_5,
+        player_6: players.player_6,
+        player_7: players.player_7,
+        player_8: players.player_8,
+        player_9: players.player_9,
+        player_10: players.player_10,
+        player_11: players.player_11,
+        player_12: players.player_12,
+        player_13: players.player_13,
+        player_14: players.player_14,
+        player_15: players.player_15,
+        player_16: players.player_16,
+        player_17: players.player_17,
+        player_18: players.player_18,
+        player_19: players.player_19,
+        player_20: players.player_20,
+        player_21: players.player_21,
+        player_22: players.player_22,
+        player_23: players.player_23,
+        player_24: players.player_24,
+        player_25: players.player_25,
+        player_26: players.player_26,
+        player_27: players.player_27,
+        player_28: players.player_28,
+        player_29: players.player_29,
+        player_30: players.player_30,
+        player_31: players.player_31,
+        player_32: players.player_32,
+        player_33: players.player_33,
+        player_34: players.player_34,
+        player_35: players.player_35,
+        player_36: players.player_36,
+        player_37: players.player_37,
+        player_38: players.player_38,
+        player_39: players.player_39,
+        player_40: players.player_40,
+        player_41: players.player_41,
+        player_42: players.player_42,
+        player_43: players.player_43,
+        player_44: players.player_44,
+        player_45: players.player_45,
+        player_46: players.player_46,
+        player_47: players.player_47,
+        player_48: players.player_48,
+        player_49: players.player_49,
+        player_50: players.player_50,
+        player_51: players.player_51,
+        player_52: players.player_52,
+        player_53: players.player_53,
+        player_54: players.player_54,
+        player_55: players.player_55,
+        player_56: players.player_56,
+        player_57: players.player_57,
+        player_58: players.player_58,
+        player_59: players.player_59,
+        player_60: players.player_60,
+        player_61: players.player_61,
+        player_62: players.player_62,
+        player_63: players.player_63,
+      };
 
-      // refactor how the brackets are created in the api
+      formRef.current?.setData(bracketObject);
+      setPlayers(response.data);
     }
     loadPlayers();
   }, [categoryId]);
 
+  const handleSubmit = useCallback(
+    async (data: BracketFormat) => {
+      try {
+        formRef.current?.setErrors({});
+
+        await api.post(`/brackets/${categoryId}`, data);
+
+        addToast({
+          type: 'success',
+          title: 'Dados Cadastrados com sucesso',
+          description: 'A chave está pronta para visualização.',
+        });
+      } catch (err) {
+        addToast({
+          type: 'error',
+          title: 'Erro na Autenticação',
+          description:
+            'Não foi possível atualizar a chave. Verifique seus dados.',
+        });
+      }
+    },
+    [addToast, categoryId],
+  );
+
   return (
     <>
-      <Form
-        onSubmit={() => {
-          console.log('hello');
-        }}
-      >
+      <Form onSubmit={handleSubmit} ref={formRef} initialData={players}>
         <section id="bracket">
           <div className="container">
             <div className="split split-one">
@@ -417,6 +576,10 @@ const BracketItem: React.FC = () => {
           <span id="champion-text">Campeão</span>
           <div className="winner">
             <BracketInput name="player_63" />
+          </div>
+
+          <div className="submit">
+            <button type="submit">Salvar</button>
           </div>
         </section>
       </Form>
