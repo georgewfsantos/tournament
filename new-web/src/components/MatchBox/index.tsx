@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+
+import { format } from 'date-fns';
 
 import { Result } from '../../pages/Results';
 
@@ -17,11 +19,15 @@ interface MathcBoxProps {
 }
 
 const MatchBox: React.FC<MathcBoxProps> = ({ result }) => {
+  const formattedDate = useMemo(() => {
+    return format(new Date(result.match_date), 'dd/MM/yyyy');
+  }, [result.match_date]);
+
   return (
     <Container>
       <BoxHeader>
         <p>{result.category}</p>
-        <p>{result.match_date}</p>
+        <p>{formattedDate}</p>
       </BoxHeader>
       <Content>
         <PlayerInfo>

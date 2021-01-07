@@ -175,7 +175,7 @@ const EditableMatchBox: React.FC = () => {
         </div>
 
         <div className="see-results">
-          <Link to="/results">
+          <Link to="/editResults/adminResults">
             <FiList size={20} color="#32067c" />
             Clique aqui para ver resultados
           </Link>

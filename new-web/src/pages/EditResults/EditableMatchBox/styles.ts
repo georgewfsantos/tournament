@@ -45,6 +45,7 @@ export const MainContent = styled.div`
       align-items: center;
       justify-content: center;
       text-decoration: none;
+      color: #32067c;
 
       &:hover {
         color: ${lighten(0.2, '#32067c')};

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import tennisBg from '../../assets/tennis_ball_1.png';
+import tennisBg from '../../assets/purple_tennis_ball.png';
 
 export const Container = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ export const Container = styled.div`
       border-radius: 50%;
       transition: all 0.2s ease-in-out;
 
-      color: #32067c;
+      color: #fff;
       text-transform: capitalize;
       text-decoration: double;
       font-weight: 500;

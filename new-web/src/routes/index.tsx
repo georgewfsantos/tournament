@@ -16,6 +16,7 @@ import BracketItem from '../pages/Brackets/BracketItem';
 import BracketDisplay from '../pages/Brackets/BracketDisplay';
 import Results from '../pages/Results';
 import EditResults from '../pages/EditResults';
+import AdminResults from '../pages/AdminResults';
 
 const Routes: React.FC = () => {
   const { user } = useAuth();
@@ -42,17 +43,13 @@ const Routes: React.FC = () => {
         component={SubscriptionList}
         isPrivate
       />
+      <Route path="/editResults" exact component={EditResults} isPrivate />
       <Route
-        // path="/subscriptionList/:classId"
-        path="/Editresults"
-        component={EditResults}
+        path="/editResults/adminResults"
+        component={AdminResults}
         isPrivate
       />
-      <Route
-        // path="/subscriptionList/:classId"
-        path="/results"
-        component={Results}
-      />
+      <Route path="/results" component={Results} />
     </Switch>
   );
 };
