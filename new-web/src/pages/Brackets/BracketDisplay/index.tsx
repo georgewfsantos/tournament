@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 
 import './styles.css';
 import api from '../../../services/api';
-import BracketInput from '../components/BracketInput';
 
 import { BracketItemParams, BracketFormat } from '../BracketItem';
 
