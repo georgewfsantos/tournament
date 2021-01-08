@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -46,7 +47,7 @@ const SubscriptionList: React.FC = () => {
             <ListRow key={player.id}>
               <p>{player.name}</p>
               <p>{player.phone_number}</p>
-              <p>{player.createdAt}</p>
+              <p>{format(new Date(player.createdAt), 'dd/MM/yyyy')}</p>
               <p>Outra opção...</p>
             </ListRow>
           ))}
