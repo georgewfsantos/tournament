@@ -26,7 +26,10 @@ const Routes: React.FC = () => {
       <Route path="/signIn" component={SignIn} />
       <Route path="/subscriptions" component={Subscriptions} />
       <Route path="/brackets" exact component={Brackets} isPrivate={!!user} />
-      <Route path="/brackets/bracketDisplay" component={BracketDisplay} />
+      <Route
+        path="/brackets/bracketDisplay/:categoryId"
+        component={BracketDisplay}
+      />
       <Route
         path="/brackets/bracketItem/:categoryId"
         component={BracketItem}

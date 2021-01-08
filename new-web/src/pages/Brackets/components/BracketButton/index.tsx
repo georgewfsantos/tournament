@@ -17,7 +17,7 @@ const BracketButton: React.FC<BracketButtonProps> = ({ category }) => {
   const handleBracketsNavigation = () => {
     return user
       ? history.push(`/brackets/bracketItem/${category.id}`)
-      : history.push('/brackets/bracketDisplay');
+      : history.push(`/brackets/bracketDisplay/${category.id}`);
   };
 
   return (

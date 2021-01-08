@@ -10,11 +10,11 @@ import BracketInput from '../components/BracketInput';
 
 import './styles.css';
 
-interface BracketItemParams {
+export interface BracketItemParams {
   categoryId: string;
 }
 
-interface BracketFormat {
+export interface BracketFormat {
   name: string;
   player_1: string;
   player_2: string;

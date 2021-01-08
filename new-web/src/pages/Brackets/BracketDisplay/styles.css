@@ -215,8 +215,11 @@ body {
   overflow: hidden;
 }
 
-.winner input {
-  text-align: center;
+.winner p {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    font-size: 12px;
 }
 
 #champion-text {
