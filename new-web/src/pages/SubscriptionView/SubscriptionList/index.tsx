@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import api from '../../../services/api';
+import { BracketItemParams } from '../../Brackets/BracketItem';
 
 import { Container, Content, ListRow } from './styles';
-
-interface RouteProps {
-  categoryId: string;
-}
-
-type CategoryParams = RouteComponentProps<RouteProps>;
 
 interface Player {
   id: number;
@@ -22,20 +17,19 @@ interface Player {
   createdAt: string;
 }
 
-const SubscriptionList: React.FC<CategoryParams> = ({ match }) => {
+const SubscriptionList: React.FC = () => {
+  const { categoryId } = useParams<BracketItemParams>();
   const [players, setPlayers] = useState<Player[]>([]);
 
   useEffect(() => {
     async function loadPlayers() {
-      const response = await api.get(
-        `/players?categoryNumber=${match.params.categoryId}`,
-      );
+      const response = await api.get(`/players/${categoryId}`);
 
       setPlayers(response.data);
     }
 
     loadPlayers();
-  }, [match.params.categoryId]);
+  }, [categoryId]);
 
   return (
     <>
@@ -62,4 +56,4 @@ const SubscriptionList: React.FC<CategoryParams> = ({ match }) => {
   );
 };
 
-export default withRouter(SubscriptionList);
+export default SubscriptionList;
