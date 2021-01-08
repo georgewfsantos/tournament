@@ -38,7 +38,9 @@ class BracketController {
     const bracket = await BracketPlayer.findByPk(category_id);
 
     if (!bracket) {
-      return res.status(404).json({ error: ' Bracket not found' });
+      return res.json({
+        error: 'No bracket data available  for that class yet.',
+      });
     }
     return res.json(bracket);
   }
