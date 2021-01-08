@@ -11,6 +11,7 @@ import ResultController from './app/controllers/ResultController';
 const routes = new Router();
 
 routes.get('/categories', CategoryController.index);
+routes.get('/brackets/:category_id', BracketController.show);
 
 // routes.get('/bracket1', BracketPlayerController.index);
 
@@ -32,7 +33,7 @@ routes.delete('/players/:id', PlayerController.delete);
 routes.post('/categories', CategoryController.store);
 
 routes.post('/brackets/:category_id', BracketController.store);
-routes.get('/brackets/:category_id', BracketController.show);
+
 // routes.put('/brackets/:category_id', BracketController.update);
 
 routes.post('/results', ResultController.store);
