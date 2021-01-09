@@ -48,7 +48,7 @@ const SubscriptionList: React.FC = () => {
           <p>Nome do jogador</p>
           <p>Telefone</p>
           <p>Data de inscrição</p>
-          <p>Outra opção...</p>
+          <p>Observações</p>
         </ListRow>
 
         {players?.map(player => (
@@ -56,7 +56,7 @@ const SubscriptionList: React.FC = () => {
             <p>{player.name}</p>
             <p>{player.phone_number}</p>
             <p>{format(new Date(player.createdAt), 'dd/MM/yyyy')}</p>
-            <p>Outra opção...</p>
+            <p>{player.restrictions ? player.restrictions : ' '}</p>
           </ListRow>
         ))}
       </Content>
