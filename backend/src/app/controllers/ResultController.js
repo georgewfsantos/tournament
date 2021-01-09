@@ -9,9 +9,11 @@ class ResultController {
           where: {
             category: categoryName,
           },
-          order: [['match_date', 'ASC']],
+          order: [['category', 'ASC']],
         })
-      : await Result.findAll();
+      : await Result.findAll({
+          order: [['category', 'ASC']],
+        });
 
     return res.json(results);
   }

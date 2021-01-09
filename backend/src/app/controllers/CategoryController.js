@@ -18,15 +18,15 @@ class CategoryController {
   }
 
   async show(req, res) {
-    const { id } = req.params;
+    const { category_id } = req.params;
 
-    if (!id) {
+    if (!category_id) {
       return res.json({
-        error: `No category with id ${id} was found`,
+        error: `No category with id ${category_id} was found`,
       });
     }
 
-    const player = await Category.findByPk(id);
+    const player = await Category.findByPk(category_id);
 
     return res.json(player);
   }

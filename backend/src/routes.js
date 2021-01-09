@@ -30,6 +30,7 @@ routes.get('/players/:id', PlayerController.show);
 routes.put('/players/:id', PlayerController.update);
 routes.delete('/players/:id', PlayerController.delete);
 
+routes.get('/categories/:category_id', CategoryController.show);
 routes.post('/categories', CategoryController.store);
 
 routes.post('/brackets/:category_id', BracketController.store);
