@@ -23,13 +23,18 @@ class BracketController {
       },
     });
 
-    if (!foundBracket) {
-      await BracketPlayer.create(req.body);
+    if (foundBracket) {
+      const updatedBracket = await foundBracket.update(req.body);
+
+      return res.json(updatedBracket);
     }
 
-    const updatedBracket = await foundBracket.update(req.body);
+    const bracket = await BracketPlayer.create({
+      name: category.name,
+      ...req.body,
+    });
 
-    return res.json(updatedBracket);
+    return res.json(bracket);
   }
 
   async show(req, res) {

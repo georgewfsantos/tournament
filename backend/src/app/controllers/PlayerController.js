@@ -61,24 +61,8 @@ class PlayerController {
         .json({ error: 'Validation failed. Check the information provided' });
     }
 
-    const {
-      name,
-      email,
-      category_id,
-      phone_number,
-      guests,
-      restrictions,
-    } = req.body;
-
     try {
-      const player = await Player.create({
-        name,
-        email,
-        category_id,
-        phone_number,
-        guests,
-        restrictions,
-      });
+      const player = await Player.create(req.body);
       return res.json(player);
     } catch (err) {
       return res.status(400).json({ error: `${err}` });

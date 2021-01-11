@@ -34,6 +34,7 @@ routes.get('/categories/:category_id', CategoryController.show);
 routes.post('/categories', CategoryController.store);
 
 routes.post('/brackets/:category_id', BracketController.store);
+// routes.put('/brackets/:category_id', BracketController.update);
 
 // routes.put('/brackets/:category_id', BracketController.update);
 
