@@ -15,7 +15,6 @@ export interface BracketItemParams {
 }
 
 export interface BracketFormat {
-  name: string;
   player_1: string;
   player_2: string;
   player_3: string;
