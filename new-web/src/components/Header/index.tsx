@@ -41,6 +41,12 @@ const Header: React.FC = () => {
           >
             Resultados
           </NavLink>
+
+          {user && (
+            <NavLink to="/createClass" activeStyle={{ color: '#32067c' }}>
+              Criar Classe
+            </NavLink>
+          )}
         </nav>
         {user && (
           <Profile>

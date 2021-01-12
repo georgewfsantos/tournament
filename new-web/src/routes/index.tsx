@@ -17,6 +17,7 @@ import BracketDisplay from '../pages/Brackets/BracketDisplay';
 import Results from '../pages/Results';
 import EditResults from '../pages/EditResults';
 import AdminResults from '../pages/AdminResults';
+import CreateClass from '../pages/CreateClass';
 
 const Routes: React.FC = () => {
   const { user } = useAuth();
@@ -53,6 +54,7 @@ const Routes: React.FC = () => {
         isPrivate
       />
       <Route path="/results" component={Results} />
+      <Route path="/createClass" component={CreateClass} isPrivate />
     </Switch>
   );
 };
