@@ -40,7 +40,7 @@ const Results: React.FC = () => {
         </div>
       ) : (
         <EmptyListContainer>
-          Não há resultados registrados até o momento
+          Não há resultados registrados até o momento.
         </EmptyListContainer>
       )}
     </Container>
