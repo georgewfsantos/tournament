@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import EmptyListContainer from '../../components/EmptyListContainer';
 import MatchBox from '../../components/MatchBox';
 import api from '../../services/api';
 
@@ -31,11 +32,17 @@ const Results: React.FC = () => {
   }, []);
   return (
     <Container>
-      <div className="grid-container">
-        {results.map(result => (
-          <MatchBox key={result.id} result={result} />
-        ))}
-      </div>
+      {results.length ? (
+        <div className="grid-container">
+          {results.map(result => (
+            <MatchBox key={result.id} result={result} />
+          ))}
+        </div>
+      ) : (
+        <EmptyListContainer>
+          Não há resultados registrados até o momento
+        </EmptyListContainer>
+      )}
     </Container>
   );
 };
