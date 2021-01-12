@@ -69,7 +69,7 @@ const CreateClass: React.FC = () => {
         <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Crie uma classe</h1>
 
-          <Input name="name" icon={FiList} placeholder="Nome da Classe" />
+          <Input name="name" icon={FiList} placeholder="Nome da classe" />
 
           <Button type="submit">Entrar</Button>
         </Form>

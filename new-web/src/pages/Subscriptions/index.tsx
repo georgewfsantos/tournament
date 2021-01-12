@@ -20,9 +20,14 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import api from '../../services/api';
 import { useToast } from '../../hooks/toast';
+import AsyncSelectInput from '../../components/AsynSelectInput';
+
+import { Category } from '../Brackets';
 
 const Subscriptions: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const selectRef = useRef(null);
+
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(
@@ -69,6 +74,17 @@ const Subscriptions: React.FC = () => {
     [addToast],
   );
 
+  const loadOptions = async (inputValue: string, callback: Function) => {
+    const response = await api.get('/categories');
+
+    const inputData = response.data.map((category: Category) => ({
+      value: category.id,
+      label: category.name,
+    }));
+
+    callback(inputData);
+  };
+
   return (
     <Container>
       <Content>
@@ -79,11 +95,19 @@ const Subscriptions: React.FC = () => {
 
           <Input name="name" icon={FiUser} placeholder="Nome Completo" />
           <Input name="email" icon={FiMail} placeholder="E-mail" />
-          <Input
+          {/* <Input
             type="number"
             name="category_id"
             icon={FiList}
             placeholder="Classe (1, 2, etc...)"
+          /> */}
+          <AsyncSelectInput
+            name="category_id"
+            ref={selectRef}
+            cachedOptions
+            loadOptions={loadOptions}
+            defaultOptions
+            icon={FiList}
           />
           <Input name="phone_number" icon={FiPhone} placeholder="Telefone" />
           <Input
