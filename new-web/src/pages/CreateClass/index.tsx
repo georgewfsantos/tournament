@@ -67,7 +67,7 @@ const CreateClass: React.FC = () => {
         <img src={logo} alt="Tennis Tournament" />
 
         <Form ref={formRef} onSubmit={handleSubmit}>
-          <h1>Acessar como Admin</h1>
+          <h1>Crie uma classe</h1>
 
           <Input name="name" icon={FiList} placeholder="Nome da Classe" />
 
