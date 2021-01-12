@@ -57,7 +57,7 @@ export const AsyncSelectInput: React.FC<AsyncSelectInputProps> = ({
         ref={selectRef}
         classNamePrefix="react-select"
         styles={customStyles}
-        placeholder="Digite algo e selecione"
+        placeholder="Digite uma tecla para ver opções"
         {...rest}
         theme={theme => ({
           ...theme,
