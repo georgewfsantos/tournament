@@ -54,7 +54,7 @@ export const PlayerInfo = styled.div`
 export const PlayerScore = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 50px;
 
   &:last-child {
@@ -63,7 +63,8 @@ export const PlayerScore = styled.div`
 `;
 
 export const SetScore = styled.div`
-  width: 20px;
+  width: 33.33%;
+  text-align: center;
 `;
 
 export const PlayerName = styled.div``;

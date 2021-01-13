@@ -113,7 +113,7 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_1_score_1"
-                    defaultValue="0"
+                    defaultValue={0}
                   />
                 </SetScore>
                 <SetScore>
@@ -121,7 +121,7 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_1_score_2"
-                    defaultValue="0"
+                    defaultValue={0}
                   />
                 </SetScore>
                 <SetScore>
@@ -129,6 +129,7 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_1_score_3"
+                    defaultValue={0}
                   />
                 </SetScore>
               </PlayerScore>
@@ -148,7 +149,7 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_2_score_1"
-                    defaultValue="0"
+                    defaultValue={0}
                   />
                 </SetScore>
                 <SetScore>
@@ -156,7 +157,7 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_2_score_2"
-                    defaultValue="0"
+                    defaultValue={0}
                   />
                 </SetScore>
                 <SetScore>
@@ -164,6 +165,7 @@ const EditableMatchBox: React.FC = () => {
                     type="number"
                     className="player-score"
                     name="player_2_score_3"
+                    defaultValue={0}
                   />
                 </SetScore>
               </PlayerScore>

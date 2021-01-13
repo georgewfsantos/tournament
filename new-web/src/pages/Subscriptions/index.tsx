@@ -95,12 +95,6 @@ const Subscriptions: React.FC = () => {
 
           <Input name="name" icon={FiUser} placeholder="Nome Completo" />
           <Input name="email" icon={FiMail} placeholder="E-mail" />
-          {/* <Input
-            type="number"
-            name="category_id"
-            icon={FiList}
-            placeholder="Classe (1, 2, etc...)"
-          /> */}
           <AsyncSelectInput
             name="category_id"
             ref={selectRef}
