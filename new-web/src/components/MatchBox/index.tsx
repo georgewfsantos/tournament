@@ -35,7 +35,7 @@ const MatchBox: React.FC<MathcBoxProps> = ({ result }) => {
           <PlayerScore>
             <SetScore>{result.player_1_score_1}</SetScore>
             <SetScore>{result.player_1_score_2}</SetScore>
-            {result.player_1_score_3 && (
+            {result.player_1_score_3 >= '1' && (
               <SetScore>{result.player_1_score_3}</SetScore>
             )}
           </PlayerScore>
@@ -46,7 +46,7 @@ const MatchBox: React.FC<MathcBoxProps> = ({ result }) => {
           <PlayerScore>
             <SetScore>{result.player_2_score_1}</SetScore>
             <SetScore>{result.player_2_score_2}</SetScore>
-            {result.player_2_score_3 && (
+            {result.player_2_score_3 >= '1' && (
               <SetScore>{result.player_2_score_3}</SetScore>
             )}
           </PlayerScore>
