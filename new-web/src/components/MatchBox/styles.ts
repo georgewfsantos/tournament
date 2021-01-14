@@ -67,4 +67,10 @@ export const SetScore = styled.div`
   text-align: center;
 `;
 
-export const PlayerName = styled.div``;
+export const PlayerName = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: 10px;
+  }
+`;
