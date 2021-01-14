@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { format } from 'date-fns';
 
 import { FiCheck } from 'react-icons/fi';
-import Results, { Result } from '../../pages/Results';
+import { Result } from '../../pages/Results';
 
 import {
   Container,

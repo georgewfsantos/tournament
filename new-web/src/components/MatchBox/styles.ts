@@ -51,6 +51,14 @@ export const PlayerInfo = styled.div`
   font-size: 14px;
 `;
 
+export const PlayerName = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: 10px;
+  }
+`;
+
 export const PlayerScore = styled.div`
   display: flex;
   align-items: center;
@@ -65,12 +73,4 @@ export const PlayerScore = styled.div`
 export const SetScore = styled.div`
   width: 33.33%;
   text-align: center;
-`;
-
-export const PlayerName = styled.div`
-  display: flex;
-  align-items: center;
-  svg {
-    margin-left: 10px;
-  }
 `;
