@@ -8,7 +8,7 @@ export const Container = styled.div`
   background-color: #fff;
   border-radius: 5px 5px 0 0;
 
-  margin: 20px auto; // delete this later
+  margin: 20px auto;
 
   text-transform: uppercase;
 `;

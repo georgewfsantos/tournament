@@ -5,7 +5,7 @@ import { Container } from './styles';
 const EmptyListContainer: React.FC = ({ children }) => {
   return (
     <Container>
-      <h1>{children}</h1>
+      <h2>{children}</h2>
     </Container>
   );
 };
