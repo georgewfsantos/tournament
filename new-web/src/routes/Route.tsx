@@ -4,8 +4,6 @@ import Header from '../components/Header';
 
 import { useAuth } from '../hooks/auth';
 
-// import { Container } from './styles';
-
 interface RouteProperties extends RouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
@@ -30,7 +28,7 @@ const Route: React.FC<RouteProperties> = ({
         ) : (
           <Redirect
             to={{
-              pathname: isPrivate ? '/subscriptions' : '/subscriptionView',
+              pathname: isPrivate ? '/' : '/subscriptionView',
               state: { from: location },
             }}
           />
