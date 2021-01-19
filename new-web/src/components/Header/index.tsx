@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 
           <NavLink
             className="first-link"
-            to={`${user ? '/subscriptionView' : '/subscriptions'}`}
+            to={`${user ? '/subscriptionView' : '/'}`}
             activeStyle={{ color: '#32067c' }}
           >
             Inscrições
