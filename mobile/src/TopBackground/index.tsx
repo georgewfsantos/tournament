@@ -3,8 +3,8 @@ import {View} from 'react-native';
 
 // import { Container } from './styles';
 
-const App: React.FC = () => {
+const TopBackground: React.FC = () => {
   return <View />;
 };
 
-export default App;
+export default TopBackground;
