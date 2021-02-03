@@ -21,7 +21,7 @@ const MatchResultBox: React.FC<MatchResultBoxProps> = ({ data }) => {
   return (
     <Result>
       <Header>
-        <CategoryName>Name</CategoryName>
+        <CategoryName>Classe 1</CategoryName>
         <MatchTime>13:00hs</MatchTime>
       </Header>
       <FirstPlayerInfo>
