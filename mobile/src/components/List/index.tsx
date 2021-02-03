@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
+import MatchResultBox from '../MatchResultBox';
 
-import { Container, List, ListItem } from './styles';
+import { Container, List } from './styles';
 
 export const mockData = [
   'Hello',
@@ -19,20 +19,13 @@ const ListComponent: React.FC = () => {
         // eslint-disable-next-line react-native/no-inline-styles
         contentContainerStyle={{
           padding: 10,
-          flexDirection: 'row',
           justifyContent: 'space-between',
         }}
         horizontal
         showsHorizontalScrollIndicator={false}
         data={mockData}
         keyExtractor={(item) => item}
-        renderItem={({ item }) => (
-          <>
-            <ListItem>
-              <Text>{item}</Text>
-            </ListItem>
-          </>
-        )}
+        renderItem={({ item }) => <MatchResultBox data={item} />}
       />
     </Container>
   );
