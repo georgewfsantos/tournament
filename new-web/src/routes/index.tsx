@@ -24,8 +24,8 @@ const Routes: React.FC = () => {
 
   return (
     <Switch>
+      <Route path="/" exact strict component={Subscriptions} />
       <Route path="/signIn" component={SignIn} />
-      <Route path="/" exact component={Subscriptions} />
       <Route path="/brackets" exact component={Brackets} isPrivate={!!user} />
       <Route
         path="/brackets/bracketDisplay/:categoryId"

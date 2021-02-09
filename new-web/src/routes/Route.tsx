@@ -28,7 +28,7 @@ const Route: React.FC<RouteProperties> = ({
         ) : (
           <Redirect
             to={{
-              pathname: isPrivate ? '/' : '/subscriptionView',
+              pathname: isPrivate ? '/signIn' : '/subscriptionView',
               state: { from: location },
             }}
           />

@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     <Container>
       <Content>
         <nav>
-          <NavLink to="/signIn">
+          <NavLink to="/">
             <img src={logo} alt="Tennis Racket" />
           </NavLink>
 
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           )}
 
           <NavLink
-            to={`${user ? '/editResults' : 'results'}`}
+            to={`${user ? '/editResults' : '/results'}`}
             activeStyle={{ color: '#32067c' }}
           >
             Resultados
